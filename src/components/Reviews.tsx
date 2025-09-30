@@ -1,5 +1,6 @@
 import { Star, MapPin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import ChatBot from "./ChatBot";
 
 const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -52,6 +53,8 @@ const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: str
 };
 
 const Reviews = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  
   const reviews = [
     {
       name: "Marie D.",
@@ -194,13 +197,18 @@ const Reviews = () => {
 
         {/* Chat IA en bas à droite */}
         <div className="fixed bottom-6 right-6 z-50">
-          <button className="relative w-16 h-16 bg-red-600 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center animate-pulse">
+          <button 
+            onClick={() => setIsChatOpen(true)}
+            className="relative w-16 h-16 bg-red-600 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center animate-pulse"
+          >
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
             <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-ping"></div>
           </button>
         </div>
+
+        <ChatBot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
       </div>
     </section>
   );
