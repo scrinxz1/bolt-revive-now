@@ -129,7 +129,7 @@ const Reviews = () => {
               <div>
                 <div className="text-5xl font-black text-gray-900 mb-3">
                   <AnimatedCounter target={4} />
-                  <span>.9</span>
+                  <span>.5</span>
                   <span className="text-2xl text-gray-500">/5</span>
                 </div>
                 <div className="flex justify-center gap-1 mb-3">
