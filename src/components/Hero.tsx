@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="accueil"
-      className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-[90vh] flex items-center relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-gray-700 via-gray-600 to-gray-700 min-h-[90vh] flex items-center relative overflow-hidden"
     >
       {/* Animated Background Elements - Heartbeat Blur */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
