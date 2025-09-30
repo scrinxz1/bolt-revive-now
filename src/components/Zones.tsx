@@ -6,12 +6,10 @@ const Zones = () => {
     {
       city: "Perpignan",
       areas: ["Perpignan 66", "Pyrénées-Orientales", "Canet-en-Roussillon", "Saint-Cyprien"],
-      icon: "☀️",
     },
     {
       city: "Alentours",
       areas: ["Argelès-sur-Mer", "Collioure", "Céret", "Prades"],
-      icon: "🏖️",
     },
   ];
 
@@ -34,12 +32,9 @@ const Zones = () => {
               key={index}
               className="bg-white rounded-2xl p-8 shadow-card hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex items-center mb-6">
-                <div className="text-6xl mr-4">{zone.icon}</div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900">{zone.city}</h3>
-                  <p className="text-primary font-semibold">et alentours</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-3xl font-bold text-gray-900">{zone.city}</h3>
+                <p className="text-primary font-semibold">et alentours</p>
               </div>
               <div className="space-y-3">
                 {zone.areas.map((area, idx) => (
