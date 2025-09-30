@@ -81,7 +81,7 @@ const Hero = () => {
               <div className="inline-flex items-center bg-gradient-primary rounded-full px-6 py-3 shadow-primary">
                 <Shield className="w-5 h-5 text-primary-foreground mr-2" />
                 <span className="text-primary-foreground font-semibold text-sm">
-                  Experts Certifiés • 7j/7 24h/24
+                  <span className="text-red-500">Experts Certifiés</span> • 7j/7 24h/24
                 </span>
               </div>
 
@@ -152,7 +152,7 @@ const Hero = () => {
           <div className="lg:col-span-2 relative">
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
               <div className="text-center mb-6">
-                <div className="inline-flex items-center bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-primary animate-pulse-slow">
+                <div className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-primary animate-pulse-slow">
                   INTERVENTION D'URGENCE
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Contactez-nous</h3>

@@ -24,7 +24,7 @@ const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: str
   }, []);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || count > 0) return;
 
     const duration = 2000;
     const steps = 60;
@@ -42,7 +42,7 @@ const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: str
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isVisible, target]);
+  }, [isVisible, target, count]);
 
   return (
     <div ref={counterRef} className="text-4xl md:text-5xl font-black text-primary">
@@ -122,30 +122,30 @@ const Reviews = () => {
         </div>
 
         {/* Carte centrale avec stats */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <div className="grid md:grid-cols-2 gap-6 items-center">
               {/* Gauche - Note Google */}
               <div className="text-center border-r border-gray-200">
-                <div className="text-4xl md:text-5xl font-black text-gray-900 mb-3">
+                <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
                   <AnimatedCounter target={4} />
                   <span>.9/5</span>
                 </div>
-                <div className="flex justify-center gap-1 mb-3">
+                <div className="flex justify-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-base font-semibold text-gray-700">Note Google</div>
+                <div className="text-sm font-semibold text-gray-700">Note Google</div>
               </div>
 
               {/* Droite - Stats */}
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
+                <div className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
                   <AnimatedCounter target={247} suffix="+" />
                 </div>
-                <div className="text-base font-semibold text-gray-700 mb-3">Avis clients</div>
-                <div className="text-xl md:text-2xl font-bold text-green-600">
+                <div className="text-sm font-semibold text-gray-700 mb-2">Avis clients</div>
+                <div className="text-lg md:text-xl font-bold text-green-600">
                   <AnimatedCounter target={98} suffix="% recommandent" />
                 </div>
               </div>
@@ -158,7 +158,7 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
             >
               {/* Étoiles en haut */}
               <div className="flex gap-1 mb-4">
@@ -190,6 +190,16 @@ const Reviews = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Chat IA en bas à droite */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <button className="relative w-16 h-16 bg-red-600 rounded-full shadow-lg hover:bg-red-700 transition-all duration-300 flex items-center justify-center animate-pulse">
+            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-white rounded-full animate-ping"></div>
+          </button>
         </div>
       </div>
     </section>
