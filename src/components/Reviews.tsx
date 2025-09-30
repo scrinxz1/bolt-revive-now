@@ -112,7 +112,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="avis" className="py-20 bg-gray-50">
+    <section id="avis" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         {/* Titre */}
         <div className="text-center mb-12">
@@ -127,25 +127,25 @@ const Reviews = () => {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Gauche - Note Google */}
               <div className="text-center border-r border-gray-200">
-                <div className="text-6xl font-black text-gray-900 mb-3">
+                <div className="text-4xl md:text-5xl font-black text-gray-900 mb-3">
                   <AnimatedCounter target={4} />
                   <span>.9/5</span>
                 </div>
                 <div className="flex justify-center gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-lg font-semibold text-gray-700">Note Google</div>
+                <div className="text-base font-semibold text-gray-700">Note Google</div>
               </div>
 
               {/* Droite - Stats */}
               <div className="text-center">
-                <div className="text-5xl font-black text-gray-900 mb-2">
+                <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
                   <AnimatedCounter target={247} suffix="+" />
                 </div>
-                <div className="text-lg font-semibold text-gray-700 mb-4">Avis clients</div>
-                <div className="text-2xl font-bold text-green-600">
+                <div className="text-base font-semibold text-gray-700 mb-3">Avis clients</div>
+                <div className="text-xl md:text-2xl font-bold text-green-600">
                   <AnimatedCounter target={98} suffix="% recommandent" />
                 </div>
               </div>
