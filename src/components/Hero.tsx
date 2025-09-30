@@ -126,23 +126,25 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-black text-primary">
-                  <AnimatedCounter target={7} suffix="/7" />
+            <div className="space-y-6 pt-8">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-black text-primary">
+                    <AnimatedCounter target={7} suffix="/7" />
+                  </div>
+                  <div className="text-sm text-gray-200 font-medium">Disponible</div>
+                  <div className="text-xs text-gray-300">
+                    <AnimatedCounter target={24} suffix="h/24 pour urgences" />
+                  </div>
                 </div>
-                <div className="text-sm text-gray-200 font-medium">Disponible</div>
-                <div className="text-xs text-gray-300">
-                  <AnimatedCounter target={24} suffix="h/24 pour urgences" />
+                <div className="text-center">
+                  <div className="text-3xl font-black text-primary">Perpignan</div>
+                  <div className="text-sm text-gray-200 font-medium">& Alentours</div>
+                  <div className="text-xs text-gray-300">Intervention rapide</div>
                 </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-primary">Perpignan</div>
-                <div className="text-sm text-gray-200 font-medium">& Alentours</div>
-                <div className="text-xs text-gray-300">Intervention rapide</div>
               </div>
               <div className="flex items-center justify-center">
-                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-24 w-auto object-contain opacity-90" />
+                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-40 w-auto object-contain opacity-90 rounded-3xl" />
               </div>
             </div>
           </div>
