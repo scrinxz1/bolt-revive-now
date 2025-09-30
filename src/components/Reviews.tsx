@@ -24,7 +24,10 @@ const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: str
   }, []);
 
   useEffect(() => {
-    if (!isVisible || count > 0) return;
+    if (!isVisible) return;
+    
+    // Reset count when becoming visible
+    setCount(0);
 
     const duration = 2000;
     const steps = 60;
@@ -42,7 +45,7 @@ const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: str
     }, duration / steps);
 
     return () => clearInterval(timer);
-  }, [isVisible, target, count]);
+  }, [isVisible, target]);
 
   return (
     <div ref={counterRef} className="text-4xl md:text-5xl font-black text-primary">
@@ -127,26 +130,31 @@ const Reviews = () => {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               {/* Note Google */}
               <div>
-                <div className="mb-2">
-                  <span className="text-5xl font-black text-gray-900">4.9</span>
+                <div className="text-5xl font-black text-gray-900 mb-2">
+                  <AnimatedCounter target={4} />
+                  <span>.9</span>
                   <span className="text-2xl text-gray-500">/5</span>
+                </div>
+                <div className="flex justify-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Note Google</div>
               </div>
 
               {/* Nombre d'avis */}
               <div>
-                <div className="mb-2">
-                  <span className="text-5xl font-black text-gray-900">247</span>
-                  <span className="text-2xl text-gray-500">+</span>
+                <div className="text-5xl font-black text-gray-900 mb-2">
+                  <AnimatedCounter target={247} suffix="+" />
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Avis clients</div>
               </div>
 
               {/* Recommandations */}
               <div>
-                <div className="mb-2">
-                  <span className="text-5xl font-black text-gray-900">98%</span>
+                <div className="text-5xl font-black text-green-600 mb-2">
+                  <AnimatedCounter target={98} suffix="%" />
                 </div>
                 <div className="text-sm font-semibold text-gray-600">recommandent</div>
               </div>
