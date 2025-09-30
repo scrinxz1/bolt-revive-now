@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-dark">
+    <section id="contact" className="py-20 bg-gradient-to-b from-gray-900 via-green-950 to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6 relative">
-            <span className="absolute inset-0 blur-2xl bg-red-500/30 -z-10"></span>
+            <span className="absolute inset-0 blur-3xl bg-green-500/40 -z-10 animate-pulse-slow"></span>
             <span className="text-white">Contactez </span>
             <span className="gradient-text">Nous</span>
           </h2>

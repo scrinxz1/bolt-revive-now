@@ -1,4 +1,55 @@
-import { Star } from "lucide-react";
+import { Star, Users, CheckCircle, Award } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+
+const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, target]);
+
+  return (
+    <div ref={counterRef} className="text-4xl md:text-5xl font-black text-primary">
+      {count}{suffix}
+    </div>
+  );
+};
 
 const Reviews = () => {
   const reviews = [
@@ -61,9 +112,50 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="avis" className="py-20 bg-gray-50">
+    <section id="avis" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        {/* Stats Section with Animated Counters */}
+        <div className="mb-16">
+          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <AnimatedCounter target={500} suffix="+" />
+              <div className="text-gray-600 font-semibold mt-2">Clients Satisfaits</div>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <AnimatedCounter target={100} suffix="%" />
+              <div className="text-gray-600 font-semibold mt-2">Taux de Réussite</div>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white fill-white" />
+              </div>
+              <div className="flex items-center justify-center gap-1">
+                <AnimatedCounter target={5} />
+                <span className="text-4xl md:text-5xl font-black text-primary">.0</span>
+              </div>
+              <div className="text-gray-600 font-semibold mt-2">Note Moyenne</div>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <AnimatedCounter target={15} suffix="+" />
+              <div className="text-gray-600 font-semibold mt-2">Années d'Expérience</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Reviews Header */}
+        <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
             <span className="text-gray-900">Avis </span>
             <span className="gradient-text">Clients</span>
@@ -78,19 +170,20 @@ const Reviews = () => {
               ))}
             </div>
             <span className="text-2xl font-bold text-gray-900">5.0</span>
-            <span className="text-gray-600">({reviews.length} avis)</span>
+            <span className="text-gray-600">({reviews.length} avis vérifiés)</span>
           </div>
         </div>
 
+        {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-card hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-in"
+              className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mr-3">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mr-3 text-lg shadow-md">
                   {review.name[0]}
                 </div>
                 <div>
@@ -100,11 +193,11 @@ const Reviews = () => {
               </div>
               <div className="flex mb-3">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <p className="text-gray-700 text-sm mb-3 leading-relaxed">{review.text}</p>
-              <p className="text-xs text-gray-500">{review.date}</p>
+              <p className="text-xs text-gray-400 font-medium">{review.date}</p>
             </div>
           ))}
         </div>
