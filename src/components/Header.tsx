@@ -47,13 +47,13 @@ const Header = () => {
             </Button>
 
             <div className="text-right">
-              <div className="text-sm text-gray-400 font-medium">Urgence 7/7 24h/24</div>
+              <div className="text-sm text-gray-300 font-medium">Urgence 7/7 24h/24</div>
               <a
                 href="tel:0174747847"
-                className="text-xl font-bold text-accent hover:text-accent/90 flex items-center transition-colors duration-200"
+                className="text-xl font-bold text-red-500 hover:text-red-400 flex items-center transition-colors duration-200"
               >
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
-                  <Phone className="w-5 h-5 text-primary-foreground" />
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <Phone className="w-5 h-5 text-white" />
                 </div>
                 01 74 74 78 47
               </a>

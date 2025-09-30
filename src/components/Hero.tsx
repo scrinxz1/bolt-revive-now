@@ -90,10 +90,8 @@ const Hero = () => {
                   <div className="text-xs text-gray-500">Intervention rapide</div>
                 </div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-card border border-green-100">
-                <div className="text-center flex flex-col items-center justify-center">
-                  <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-12 w-auto object-contain" />
-                </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-card flex items-center justify-center">
+                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-16 w-auto object-contain" />
               </div>
             </div>
           </div>

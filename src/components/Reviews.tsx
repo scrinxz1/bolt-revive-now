@@ -114,9 +114,47 @@ const Reviews = () => {
   return (
     <section id="avis" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
-        {/* Stats Section with Animated Counters */}
-        <div className="mb-16">
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* Google-Style Stats Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-black mb-8">
+            <span className="text-white">Avis </span>
+            <span className="gradient-text">Clients</span>
+          </h2>
+          
+          {/* Google-Style Rating Cards */}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-yellow-400 min-w-[200px]">
+              <div className="flex items-center justify-center mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <div key={i} className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center mr-1">
+                    <Star className="w-5 h-5 fill-yellow-400 text-white" />
+                  </div>
+                ))}
+              </div>
+              <div className="text-4xl font-black text-gray-900 mb-1">
+                <AnimatedCounter target={4} />
+                <span>.9/5</span>
+              </div>
+              <div className="text-sm font-semibold text-gray-600">Note Google</div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-green-400 min-w-[200px]">
+              <div className="text-4xl font-black text-primary mb-1">
+                <AnimatedCounter target={247} suffix="+" />
+              </div>
+              <div className="text-sm font-semibold text-gray-600">Avis clients</div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-blue-400 min-w-[200px]">
+              <div className="text-4xl font-black text-blue-600 mb-1">
+                <AnimatedCounter target={98} suffix="%" />
+              </div>
+              <div className="text-sm font-semibold text-gray-600">Recommandent</div>
+            </div>
+          </div>
+
+          {/* Stats Section with Animated Counters */}
+          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -151,26 +189,6 @@ const Reviews = () => {
               <AnimatedCounter target={15} suffix="+" />
               <div className="text-gray-600 font-semibold mt-2">Années d'Expérience</div>
             </div>
-          </div>
-        </div>
-
-        {/* Reviews Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
-            <span className="text-white">Avis </span>
-            <span className="gradient-text">Clients</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
-            La satisfaction de nos clients est notre priorité.
-          </p>
-          <div className="flex items-center justify-center mt-6 space-x-2">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <span className="text-2xl font-bold text-white">5.0</span>
-            <span className="text-gray-300">({reviews.length} avis vérifiés)</span>
           </div>
         </div>
 
