@@ -1,4 +1,57 @@
 import { Star } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+
+const AnimatedCounter = ({ target, suffix = "", decimals = 0 }: { target: number; suffix?: string; decimals?: number }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    
+    setCount(0);
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(decimals > 0 ? parseFloat(current.toFixed(decimals)) : Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, target, decimals]);
+
+  return (
+    <div ref={counterRef}>
+      {decimals > 0 ? count.toFixed(decimals) : count}{suffix}
+    </div>
+  );
+};
 
 const Reviews = () => {
   const reviews = [
@@ -68,7 +121,9 @@ const Reviews = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
           <div className="text-center bg-background rounded-lg p-6 shadow-sm">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <div className="text-4xl font-bold text-primary">4.9</div>
+              <div className="text-4xl font-bold text-primary">
+                <AnimatedCounter target={4.9} decimals={1} />
+              </div>
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
@@ -81,12 +136,16 @@ const Reviews = () => {
           </div>
           
           <div className="text-center bg-background rounded-lg p-6 shadow-sm">
-            <div className="text-4xl font-bold text-primary mb-2">247</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter target={247} />
+            </div>
             <p className="text-sm text-muted-foreground">Avis clients</p>
           </div>
           
           <div className="text-center bg-background rounded-lg p-6 shadow-sm">
-            <div className="text-4xl font-bold text-primary mb-2">98%</div>
+            <div className="text-4xl font-bold text-primary mb-2">
+              <AnimatedCounter target={98} suffix="%" />
+            </div>
             <p className="text-sm text-muted-foreground">Recommandent nos services</p>
           </div>
         </div>

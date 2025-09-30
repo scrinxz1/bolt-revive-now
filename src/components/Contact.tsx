@@ -29,8 +29,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Téléphone</h4>
-                    <a href="tel:0668053434" className="text-primary hover:underline text-lg">
-                      06 68 05 34 34
+                    <a href="tel:0650298547" className="text-primary hover:underline text-lg">
+                      06 50 29 85 47
                     </a>
                     <p className="text-sm text-muted-foreground">Disponible 24h/24</p>
                   </div>
@@ -119,7 +119,7 @@ const Contact = () => {
               className="w-full text-lg"
               asChild
             >
-              <a href="tel:0668053434">
+              <a href="tel:0650298547">
                 <Phone className="mr-2 h-5 w-5" />
                 Appelez maintenant
               </a>

@@ -61,10 +61,10 @@ const Header = () => {
 
           {/* Desktop Contact Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a href="tel:0668053434">
+            <a href="tel:0650298547">
               <Button size="lg" className="gap-2">
                 <Phone className="h-4 w-4" />
-                06 68 05 34 34
+                06 50 29 85 47
               </Button>
             </a>
           </div>
@@ -106,10 +106,10 @@ const Header = () => {
               >
                 FAQ
               </button>
-              <a href="tel:0668053434" className="w-full">
+              <a href="tel:0650298547" className="w-full">
                 <Button size="lg" className="w-full gap-2">
                   <Phone className="h-4 w-4" />
-                  06 68 05 34 34
+                  06 50 29 85 47
                 </Button>
               </a>
             </nav>

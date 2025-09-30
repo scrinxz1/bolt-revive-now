@@ -30,11 +30,11 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
               <a 
-                href="tel:0668053434" 
+                href="tel:0650298547" 
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                <span>06 68 05 34 34</span>
+                <span>06 50 29 85 47</span>
               </a>
               <a 
                 href="mailto:contact@nuisibleperpignan.fr" 
