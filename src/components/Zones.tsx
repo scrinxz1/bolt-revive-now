@@ -16,7 +16,7 @@ const Zones = () => {
   ];
 
   return (
-    <section id="zones" className="py-20 bg-gradient-hero">
+    <section id="zones" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6">

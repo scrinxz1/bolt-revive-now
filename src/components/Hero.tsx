@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="accueil"
-      className="py-20 bg-gradient-hero min-h-[90vh] flex items-center relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 min-h-[90vh] flex items-center relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -40,7 +40,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6">

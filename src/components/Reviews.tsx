@@ -112,7 +112,7 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="avis" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="avis" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
         {/* Stats Section with Animated Counters */}
         <div className="mb-16">
@@ -157,10 +157,10 @@ const Reviews = () => {
         {/* Reviews Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
-            <span className="text-gray-900">Avis </span>
+            <span className="text-white">Avis </span>
             <span className="gradient-text">Clients</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto font-medium">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
             La satisfaction de nos clients est notre priorité.
           </p>
           <div className="flex items-center justify-center mt-6 space-x-2">
@@ -169,8 +169,8 @@ const Reviews = () => {
                 <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-2xl font-bold text-gray-900">5.0</span>
-            <span className="text-gray-600">({reviews.length} avis vérifiés)</span>
+            <span className="text-2xl font-bold text-white">5.0</span>
+            <span className="text-gray-300">({reviews.length} avis vérifiés)</span>
           </div>
         </div>
 
