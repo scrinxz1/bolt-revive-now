@@ -5,6 +5,8 @@ import cafardBlatte from "@/assets/cafard_blatte.png";
 import cafardIcon from "@/assets/cafard_est_blates.png";
 import frelons from "@/assets/frelons.png";
 import guepesIcon from "@/assets/guepes.png";
+import punaiseLit from "@/assets/punaise_ed_lit.png";
+import punaiseIcon from "@/assets/punaise_arraigner_fourmis.png";
 
 const Services = () => {
   const services = [
@@ -48,20 +50,12 @@ const Services = () => {
       features: ["Désinfection complète", "Sans produits chimiques", "Écologique"],
       gradient: "from-purple-500 to-purple-700",
     },
-    {
-      icon: "🦟",
-      title: "Fourmis & Moustiques",
-      subtitle: "Désinsectisation",
-      description: "Traitement contre fourmis et moustiques",
-      features: ["Fourmis charpentières", "Moustiques tigres", "Solutions durables"],
-      gradient: "from-teal-500 to-teal-700",
-    },
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-800 relative overflow-hidden">
       {/* Reflet blanc sur la section */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
@@ -79,26 +73,32 @@ const Services = () => {
             <div
               key={index}
               className={`rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                service.title === "Dératisation" || service.title === "Cafards & Blattes" || service.title === "Frelons & Guêpes"
+                service.title === "Dératisation" || service.title === "Cafards & Blattes" || service.title === "Frelons & Guêpes" || service.title === "Punaise de lit"
                   ? "relative overflow-hidden"
                   : "bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10"
               }`}
               style={
                 service.title === "Dératisation"
                   ? {
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${nuisiblePerpignan})`,
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${nuisiblePerpignan})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
                   : service.title === "Cafards & Blattes"
                   ? {
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${cafardBlatte})`,
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${cafardBlatte})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
                   : service.title === "Frelons & Guêpes"
                   ? {
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${frelons})`,
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${frelons})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
+                  : service.title === "Punaise de lit"
+                  ? {
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${punaiseLit})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
@@ -106,24 +106,20 @@ const Services = () => {
               }
             >
               {/* Reflet blanc sur les cartes noires */}
-              {service.title !== "Dératisation" && service.title !== "Cafards & Blattes" && service.title !== "Frelons & Guêpes" && (
+              {service.title !== "Dératisation" && service.title !== "Cafards & Blattes" && service.title !== "Frelons & Guêpes" && service.title !== "Punaise de lit" && (
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none rounded-xl"></div>
               )}
               
               <div className="relative z-10">
-                <div
-                  className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
-                    service.title === "Dératisation" || service.title === "Cafards & Blattes" || service.title === "Frelons & Guêpes"
-                      ? "bg-white/10 border border-white/20"
-                      : `bg-gradient-to-r ${service.gradient}`
-                  }`}
-                >
+                <div className="w-16 h-16 flex items-center justify-center mb-6">
                   {service.title === "Dératisation" ? (
-                    <img src={ratSouris} alt="Rat et souris" className="w-12 h-12 object-contain" />
+                    <img src={ratSouris} alt="Rat et souris" className="w-16 h-16 object-contain" />
                   ) : service.title === "Cafards & Blattes" ? (
-                    <img src={cafardIcon} alt="Cafards" className="w-12 h-12 object-contain" />
+                    <img src={cafardIcon} alt="Cafards" className="w-16 h-16 object-contain" />
                   ) : service.title === "Frelons & Guêpes" ? (
-                    <img src={guepesIcon} alt="Frelons et Guêpes" className="w-12 h-12 object-contain" />
+                    <img src={guepesIcon} alt="Frelons et Guêpes" className="w-16 h-16 object-contain" />
+                  ) : service.title === "Punaise de lit" ? (
+                    <img src={punaiseIcon} alt="Punaise de lit" className="w-16 h-16 object-contain" />
                   ) : (
                     <span className="text-white text-2xl">{service.icon}</span>
                   )}
