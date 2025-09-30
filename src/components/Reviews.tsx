@@ -127,33 +127,28 @@ const Reviews = () => {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               {/* Note Google */}
               <div>
-                <div className="text-5xl font-black text-gray-900 mb-3">
-                  <AnimatedCounter target={4} />
-                  <span>.5</span>
+                <div className="mb-2">
+                  <span className="text-5xl font-black text-gray-900">4.9</span>
                   <span className="text-2xl text-gray-500">/5</span>
-                </div>
-                <div className="flex justify-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Note Google</div>
               </div>
 
               {/* Nombre d'avis */}
               <div>
-                <div className="text-5xl font-black text-gray-900 mb-3">
-                  <AnimatedCounter target={247} suffix="+" />
+                <div className="mb-2">
+                  <span className="text-5xl font-black text-gray-900">247</span>
+                  <span className="text-2xl text-gray-500">+</span>
                 </div>
-                <div className="text-sm font-semibold text-gray-600">Avis clients vérifiés</div>
+                <div className="text-sm font-semibold text-gray-600">Avis clients</div>
               </div>
 
               {/* Recommandations */}
               <div>
-                <div className="text-5xl font-black text-green-600 mb-3">
-                  <AnimatedCounter target={98} suffix="%" />
+                <div className="mb-2">
+                  <span className="text-5xl font-black text-gray-900">98%</span>
                 </div>
-                <div className="text-sm font-semibold text-gray-600">Recommandent nos services</div>
+                <div className="text-sm font-semibold text-gray-600">recommandent</div>
               </div>
             </div>
           </div>
