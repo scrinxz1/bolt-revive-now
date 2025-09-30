@@ -1,6 +1,57 @@
 import { Phone, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import certibiocide from "@/assets/certibiocide.png";
+import { useState, useEffect, useRef } from "react";
+
+const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, target]);
+
+  return (
+    <div ref={counterRef}>
+      {count}{suffix}
+    </div>
+  );
+};
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -76,22 +127,22 @@ const Hero = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-card border border-green-100">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-primary">7/7</div>
-                  <div className="text-sm text-gray-600 font-medium">Disponible</div>
-                  <div className="text-xs text-gray-500">24h/24 pour urgences</div>
+              <div className="text-center">
+                <div className="text-3xl font-black text-primary">
+                  <AnimatedCounter target={7} suffix="/7" />
+                </div>
+                <div className="text-sm text-gray-200 font-medium">Disponible</div>
+                <div className="text-xs text-gray-300">
+                  <AnimatedCounter target={24} suffix="h/24 pour urgences" />
                 </div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-card border border-green-100">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-primary">Perpignan</div>
-                  <div className="text-sm text-gray-600 font-medium">& Alentours</div>
-                  <div className="text-xs text-gray-500">Intervention rapide</div>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-black text-primary">Perpignan</div>
+                <div className="text-sm text-gray-200 font-medium">& Alentours</div>
+                <div className="text-xs text-gray-300">Intervention rapide</div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-card flex items-center justify-center">
-                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-20 w-auto object-contain opacity-90" />
+              <div className="flex items-center justify-center">
+                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-24 w-auto object-contain opacity-90" />
               </div>
             </div>
           </div>
