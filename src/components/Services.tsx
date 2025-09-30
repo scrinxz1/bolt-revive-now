@@ -98,15 +98,16 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300"
+              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <img 
-                  src={service.icon} 
-                  alt={service.title}
-                  className="w-16 h-16 object-contain"
-                />
-                <div>
+              {/* Image de fond */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-10"
+                style={{ backgroundImage: `url(${service.icon})` }}
+              />
+              
+              <div className="relative z-10">
+                <div className="mb-4">
                   <h3 className="text-xl font-bold text-foreground">
                     {service.title}
                   </h3>
@@ -114,13 +115,12 @@ const Services = () => {
                     {service.subtitle}
                   </p>
                 </div>
-              </div>
 
-              <p className="text-muted-foreground mb-6">
-                {service.description}
-              </p>
+                <p className="text-muted-foreground mb-6">
+                  {service.description}
+                </p>
 
-              <ul className="space-y-3">
+                <ul className="space-y-3">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -128,6 +128,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           ))}
         </div>

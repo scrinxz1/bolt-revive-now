@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-green-700 border-b border-green-600 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Company Name */}
@@ -26,8 +26,8 @@ const Header = () => {
               className="h-14 w-auto"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foreground">Nuisible Perpignan</h1>
-              <p className="text-xs text-muted-foreground">Expert en désinsectisation</p>
+              <h1 className="text-xl font-bold text-white">Nuisible Perpignan</h1>
+              <p className="text-xs text-white/80">Expert en désinsectisation</p>
             </div>
           </div>
 
@@ -35,25 +35,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-white/80 transition-colors font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("zones")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-white/80 transition-colors font-medium"
             >
               Zones
             </button>
             <button
               onClick={() => scrollToSection("avis")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-white/80 transition-colors font-medium"
             >
               Avis
             </button>
             <button
               onClick={() => scrollToSection("faq")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-white/80 transition-colors font-medium"
             >
               FAQ
             </button>
@@ -72,7 +72,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-foreground p-2"
+            className="md:hidden text-white p-2"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -80,29 +80,29 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-green-600">
             <nav className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-white/80 transition-colors font-medium text-left"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("zones")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-white/80 transition-colors font-medium text-left"
               >
                 Zones
               </button>
               <button
                 onClick={() => scrollToSection("avis")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-white/80 transition-colors font-medium text-left"
               >
                 Avis
               </button>
               <button
                 onClick={() => scrollToSection("faq")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-white/80 transition-colors font-medium text-left"
               >
                 FAQ
               </button>

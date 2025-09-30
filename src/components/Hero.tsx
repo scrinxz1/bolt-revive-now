@@ -54,17 +54,14 @@ const Hero = () => {
           {/* Value Props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-3">⏱️</div>
               <h3 className="font-bold text-xl mb-2">Intervention rapide</h3>
               <p className="text-sm text-white/90">Notre équipe est à votre disposition 24h/24 et 7j/7</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-3">✨</div>
               <h3 className="font-bold text-xl mb-2">Solutions efficaces</h3>
               <p className="text-sm text-white/90">Produits professionnels innovants et performants</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl mb-3">⭐</div>
               <h3 className="font-bold text-xl mb-2">Savoir-faire vérifié</h3>
               <p className="text-sm text-white/90">Service de qualité et de confiance</p>
             </div>
