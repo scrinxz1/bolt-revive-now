@@ -143,8 +143,7 @@ const Reviews = () => {
               {/* Nombre d'avis */}
               <div>
                 <div className="text-5xl font-black text-gray-900 mb-3">
-                  <AnimatedCounter target={247} />
-                  <span className="text-2xl text-gray-500">+</span>
+                  <AnimatedCounter target={247} suffix="+" />
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Avis clients vérifiés</div>
               </div>
@@ -152,8 +151,7 @@ const Reviews = () => {
               {/* Recommandations */}
               <div>
                 <div className="text-5xl font-black text-green-600 mb-3">
-                  <AnimatedCounter target={98} />
-                  <span className="text-2xl">%</span>
+                  <AnimatedCounter target={98} suffix="%" />
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Recommandent nos services</div>
               </div>
