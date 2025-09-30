@@ -1,10 +1,9 @@
 import { CheckCircle2 } from "lucide-react";
 import cafardBlatte from "@/assets/cafard_blatte.png";
-import ratSouris from "@/assets/rat_et_souris.png";
+import ratSourisNew from "@/assets/rat_souris_new.png";
 import punaiseLit from "@/assets/punaise_ed_lit.png";
-import guepes from "@/assets/guepes.png";
-import frelons from "@/assets/frelons.png";
-import punaiseFourmis from "@/assets/punaise_arraigner_fourmis.png";
+import guepesFrelons from "@/assets/guepes_frelons.png";
+import hydrogeneNew from "@/assets/hydrogene_new.png";
 
 const Services = () => {
   const services = [
@@ -21,7 +20,7 @@ const Services = () => {
       ]
     },
     {
-      icon: ratSouris,
+      icon: ratSourisNew,
       title: "Rats et Souris",
       subtitle: "Dératisation efficace",
       description: "Solutions professionnelles de dératisation adaptées à votre situation",
@@ -34,50 +33,38 @@ const Services = () => {
     },
     {
       icon: punaiseLit,
-      title: "Punaises de Lit",
+      title: "Punaises de Lit, Fourmis et Araignées",
       subtitle: "Traitement spécialisé",
-      description: "Éradication totale des punaises de lit avec méthodes professionnelles",
+      description: "Éradication totale des punaises de lit et contrôle des invasions d'insectes",
       features: [
         "Détection canine disponible",
         "Traitement thermique et chimique",
-        "Préparation guidée",
+        "Barrières préventives",
         "Plusieurs passages inclus"
       ]
     },
     {
-      icon: guepes,
-      title: "Guêpes",
+      icon: guepesFrelons,
+      title: "Guêpes et Frelons",
       subtitle: "Destruction de nids",
-      description: "Intervention sécurisée pour la destruction des nids de guêpes",
+      description: "Intervention sécurisée pour la destruction des nids de guêpes et frelons",
       features: [
+        "Frelons asiatiques et européens",
         "Intervention en hauteur",
-        "Équipement de protection",
-        "Destruction du nid",
-        "Prévention des retours"
-      ]
-    },
-    {
-      icon: frelons,
-      title: "Frelons",
-      subtitle: "Élimination sécurisée",
-      description: "Traitement professionnel des nids de frelons européens et asiatiques",
-      features: [
-        "Intervention rapide",
         "Nacelle disponible",
-        "Destruction complète",
-        "Respect de l'environnement"
+        "Destruction complète"
       ]
     },
     {
-      icon: punaiseFourmis,
-      title: "Fourmis et Araignées",
-      subtitle: "Contrôle des invasions",
-      description: "Solutions durables contre les invasions de fourmis et araignées",
+      icon: hydrogeneNew,
+      title: "Nettoyage Hydrogène",
+      subtitle: "Désinfection professionnelle",
+      description: "Nettoyage et désinfection écologique par vaporisation d'hydrogène",
       features: [
-        "Traitement extérieur/intérieur",
-        "Barrières préventives",
-        "Produits résiduels",
-        "Conseils de prévention"
+        "Désinfection complète",
+        "Sans produits chimiques nocifs",
+        "Écologique et efficace",
+        "Idéal après infestation"
       ]
     }
   ];
@@ -121,13 +108,13 @@ const Services = () => {
                 </p>
 
                 <ul className="space-y-3">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm text-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
