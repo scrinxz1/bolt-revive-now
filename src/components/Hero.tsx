@@ -1,5 +1,6 @@
 import { Phone, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import certibiocide from "@/assets/certibiocide.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -14,22 +15,12 @@ const Hero = () => {
       id="accueil"
       className="py-20 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 min-h-[90vh] flex items-center relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements - Heartbeat Blur */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-green-400/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-green-300/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        
-        {/* Geometric shapes */}
-        <svg className="absolute top-10 right-20 w-32 h-32 text-green-500/10 animate-float" viewBox="0 0 100 100">
-          <polygon points="50,10 90,90 10,90" fill="currentColor" />
-        </svg>
-        <svg className="absolute bottom-32 left-20 w-24 h-24 text-green-400/10 animate-float" style={{ animationDelay: "2s" }} viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" fill="currentColor" />
-        </svg>
-        <svg className="absolute top-1/3 right-1/4 w-20 h-20 text-green-600/10 animate-pulse-slow" viewBox="0 0 100 100">
-          <rect x="10" y="10" width="80" height="80" fill="currentColor" />
-        </svg>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-green-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-green-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute top-1/3 left-1/2 w-80 h-80 bg-green-300/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-green-600/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -43,12 +34,12 @@ const Hero = () => {
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
                 <span className="text-gray-900">Élimination</span>
                 <br />
-                <span className="gradient-text text-6xl md:text-7xl lg:text-8xl">Professionnelle</span>
+                <span className="gradient-text text-5xl md:text-6xl lg:text-7xl">Professionnelle</span>
                 <br />
-                <span className="text-gray-700 text-3xl md:text-4xl lg:text-5xl">
+                <span className="text-gray-700 text-2xl md:text-3xl lg:text-4xl">
                   des Nuisibles
                 </span>
               </h1>
@@ -100,10 +91,8 @@ const Hero = () => {
                 </div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-card border border-green-100">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-green-600">✓</div>
-                  <div className="text-sm text-gray-600 font-medium">CERTIBIOCIDE</div>
-                  <div className="text-xs text-gray-500">Agréé par l'État</div>
+                <div className="text-center flex flex-col items-center justify-center">
+                  <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-12 w-auto object-contain" />
                 </div>
               </div>
             </div>

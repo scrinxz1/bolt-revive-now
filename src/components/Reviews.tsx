@@ -174,30 +174,32 @@ const Reviews = () => {
           </div>
         </div>
 
-        {/* Reviews Grid */}
+        {/* Reviews Grid - Google Style */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-fade-in"
+              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold mr-3 text-lg shadow-md">
-                  {review.name[0]}
-                </div>
-                <div>
-                  <div className="font-bold text-gray-900">{review.name}</div>
-                  <div className="text-sm text-gray-500">{review.location}</div>
+              <div className="flex items-start justify-between mb-3">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm mr-3">
+                    {review.name[0]}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 text-sm">{review.name}</div>
+                    <div className="text-xs text-gray-500">{review.location}</div>
+                  </div>
                 </div>
               </div>
-              <div className="flex mb-3">
+              <div className="flex items-center mb-3 space-x-1">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
+                <span className="text-xs text-gray-400 ml-2">{review.date}</span>
               </div>
-              <p className="text-gray-700 text-sm mb-3 leading-relaxed">{review.text}</p>
-              <p className="text-xs text-gray-400 font-medium">{review.date}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{review.text}</p>
             </div>
           ))}
         </div>

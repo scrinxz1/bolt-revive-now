@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, Phone, FileText, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,15 +19,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-primary">
-              <span className="text-primary-foreground font-bold text-xl">H</span>
-            </div>
-            <div>
-              <div className="text-xl font-bold text-white">Hygipro Nuisibles</div>
-              <div className="text-sm font-medium text-accent">Experts en dératisation & nuisibles</div>
-            </div>
-          </div>
+          <a href="#accueil" className="flex items-center">
+            <img src={logo} alt="HYGIPRO Nuisibles" className="h-16 w-auto" />
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">

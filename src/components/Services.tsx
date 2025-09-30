@@ -27,12 +27,28 @@ const Services = () => {
       gradient: "from-yellow-500 to-yellow-700",
     },
     {
-      icon: "🦟",
-      title: "Autres Insectes",
+      icon: "🛏️",
+      title: "Punaise de lit",
       subtitle: "Désinsectisation",
-      description: "Traitement contre tout type d'insecte nuisible",
-      features: ["Punaises de lit", "Fourmis", "Moustiques"],
+      description: "Traitement professionnel contre les punaises de lit",
+      features: ["Détection minutieuse", "Traitement thermique", "Garantie de résultat"],
       gradient: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: "🧪",
+      title: "Nettoyage Hydrogène",
+      subtitle: "Désinfection",
+      description: "Nettoyage et désinfection par vaporisation d'hydrogène",
+      features: ["Désinfection complète", "Sans produits chimiques", "Écologique"],
+      gradient: "from-purple-500 to-purple-700",
+    },
+    {
+      icon: "🦟",
+      title: "Fourmis & Moustiques",
+      subtitle: "Désinsectisation",
+      description: "Traitement contre fourmis et moustiques",
+      features: ["Fourmis charpentières", "Moustiques tigres", "Solutions durables"],
+      gradient: "from-teal-500 to-teal-700",
     },
   ];
 
@@ -49,7 +65,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
