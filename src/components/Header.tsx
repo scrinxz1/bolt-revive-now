@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Menu, Phone, FileText, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Phone } from "lucide-react";
+import { Button } from "./ui/button";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
@@ -15,94 +15,104 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-gradient-to-r from-green-700 via-green-600 to-green-700 border-b border-green-500 shadow-lg">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <a href="#accueil" className="flex items-center space-x-3">
-            <img src={logo} alt="HYGIPRO Nuisibles" className="h-16 w-auto" />
-            <div className="hidden md:block">
-              <div className="text-white font-bold text-xl">Hygipro Nuisibles</div>
-              <div className="text-red-500 font-semibold text-sm">Experts en dératisation</div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo and Company Name */}
+          <div className="flex items-center gap-3">
+            <img 
+              src={logo} 
+              alt="Logo Nuisible Perpignan" 
+              className="h-14 w-auto"
+            />
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold text-foreground">Nuisible Perpignan</h1>
+              <p className="text-xs text-muted-foreground">Expert en désinsectisation</p>
             </div>
-          </a>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {["accueil", "services", "zones", "avis", "faq", "contact"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-gray-300 hover:text-accent transition-colors duration-200 font-medium capitalize"
-              >
-                {item}
-              </button>
-            ))}
+          <nav className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("zones")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Zones
+            </button>
+            <button
+              onClick={() => scrollToSection("avis")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Avis
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              FAQ
+            </button>
           </nav>
 
-          {/* Desktop Contact */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-green-600 hover:bg-green-700 text-white"
-            >
-              <FileText className="w-4 h-4 mr-2" />
-              Devis gratuit
-            </Button>
-
-            <div className="text-right">
-              <div className="text-sm text-gray-300 font-medium">Urgence 7/7 24h/24</div>
-              <a
-                href="tel:0174747847"
-                className="text-xl font-bold text-red-500 hover:text-red-400 flex items-center transition-colors duration-200"
-              >
-                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-3">
-                  <Phone className="w-5 h-5 text-white" />
-                </div>
-                01 74 74 78 47
-              </a>
-            </div>
+          {/* Desktop Contact Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <a href="tel:0668053434">
+              <Button size="lg" className="gap-2">
+                <Phone className="h-4 w-4" />
+                06 68 05 34 34
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-foreground p-2"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden w-full bg-green-700 shadow-lg border-t border-green-500">
-            <div className="p-4">
-              <div className="grid grid-cols-3 gap-2 mb-4">
-                {["accueil", "services", "zones", "avis", "faq", "contact"].map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(item)}
-                    className="text-gray-300 hover:text-accent font-medium py-2 px-3 rounded text-center text-sm capitalize"
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="w-full bg-green-600 hover:bg-green-700 text-white mb-2"
+          <div className="md:hidden py-4 border-t border-border">
+            <nav className="flex flex-col gap-4">
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
-                <FileText className="w-4 h-4 mr-2" />
-                Devis gratuit
-              </Button>
-              <a
-                href="tel:0174747847"
-                className="flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-4 rounded-lg font-medium"
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection("zones")}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                01 74 74 78 47
+                Zones
+              </button>
+              <button
+                onClick={() => scrollToSection("avis")}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+              >
+                Avis
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+              >
+                FAQ
+              </button>
+              <a href="tel:0668053434" className="w-full">
+                <Button size="lg" className="w-full gap-2">
+                  <Phone className="h-4 w-4" />
+                  06 68 05 34 34
+                </Button>
               </a>
-            </div>
+            </nav>
           </div>
         )}
       </div>

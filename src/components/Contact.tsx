@@ -1,120 +1,127 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-gray-900 via-green-950 to-gray-900">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black mb-6 relative">
-            <span className="absolute inset-0 blur-3xl bg-green-500/40 -z-10 animate-pulse-slow"></span>
-            <span className="text-white">Contactez </span>
-            <span className="gradient-text">Nous</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Contactez-nous
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
-            Une question ? Un problème de nuisibles ? Contactez-nous maintenant !
+          <p className="text-lg text-muted-foreground">
+            Nous sommes à votre disposition 7j/7 et 24h/24
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white rounded-2xl p-8 shadow-card">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Informations de contact
-            </h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-primary-foreground" />
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-foreground">
+                Nos coordonnées
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Téléphone</h4>
+                    <a href="tel:0668053434" className="text-primary hover:underline text-lg">
+                      06 68 05 34 34
+                    </a>
+                    <p className="text-sm text-muted-foreground">Disponible 24h/24</p>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-1">Téléphone</div>
-                  <a
-                    href="tel:0174747847"
-                    className="text-primary font-bold text-xl hover:text-primary/90"
-                  >
-                    01 74 74 78 47
-                  </a>
-                  <p className="text-sm text-gray-600 mt-1">Disponible 7j/7 24h/24</p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary-foreground" />
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                    <a href="mailto:contact@nuisibleperpignan.fr" className="text-primary hover:underline">
+                      contact@nuisibleperpignan.fr
+                    </a>
+                    <p className="text-sm text-muted-foreground">Réponse sous 2h</p>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-1">Email</div>
-                  <a
-                    href="mailto:contact@hygipronuisibles.fr"
-                    className="text-blue-600 font-semibold hover:text-blue-700"
-                  >
-                    contact@hygipronuisibles.fr
-                  </a>
-                  <p className="text-sm text-gray-600 mt-1">Réponse sous 24h</p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary-foreground" />
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Zone d'intervention</h4>
+                    <p className="text-muted-foreground">
+                      Perpignan et Pyrénées-Orientales
+                    </p>
+                    <p className="text-sm text-muted-foreground">Rayon de 50 km</p>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-1">Zones d'intervention</div>
-                  <p className="text-gray-700">Perpignan et ses alentours</p>
-                  <p className="text-gray-700">Pyrénées-Orientales (66)</p>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900 mb-1">Horaires</div>
-                  <p className="text-gray-700">7 jours sur 7</p>
-                  <p className="text-gray-700">24 heures sur 24</p>
-                  <p className="text-sm text-primary font-semibold mt-1">Urgences acceptées</p>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Clock className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Horaires</h4>
+                    <p className="text-muted-foreground">7 jours sur 7</p>
+                    <p className="text-muted-foreground">24 heures sur 24</p>
+                    <p className="text-sm text-muted-foreground mt-1">Intervention d'urgence possible</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-primary rounded-2xl p-8 text-white shadow-primary">
-            <h3 className="text-2xl font-bold mb-6">Demandez un devis gratuit</h3>
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  ✓
+          {/* Call to Action */}
+          <div className="bg-primary/5 border border-primary/20 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
+              Devis gratuit et sans engagement
+            </h3>
+            
+            <p className="text-muted-foreground mb-6">
+              Obtenez une estimation rapide et précise pour votre intervention
+            </p>
+
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-start gap-2">
+                <div className="bg-primary rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-white text-xs">✓</span>
                 </div>
-                <span>Devis gratuit et sans engagement</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  ✓
+                <span className="text-foreground">Diagnostic gratuit de votre situation</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="bg-primary rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-white text-xs">✓</span>
                 </div>
-                <span>Diagnostic précis de la situation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  ✓
+                <span className="text-foreground">Intervention rapide sous 2h</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="bg-primary rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-white text-xs">✓</span>
                 </div>
-                <span>Conseils personnalisés</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  ✓
+                <span className="text-foreground">Garantie de résultat</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="bg-primary rounded-full w-5 h-5 flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="text-white text-xs">✓</span>
                 </div>
-                <span>Intervention rapide possible</span>
-              </div>
-            </div>
-            <Button
-              size="lg"
+                <span className="text-foreground">Tarifs transparents</span>
+              </li>
+            </ul>
+
+            <Button 
+              size="lg" 
+              className="w-full text-lg"
               asChild
-              className="w-full bg-white text-primary hover:bg-gray-100 shadow-lg"
             >
-              <a href="tel:0174747847" className="flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2" />
-                Appelez pour un devis : 01 74 74 78 47
+              <a href="tel:0668053434">
+                <Phone className="mr-2 h-5 w-5" />
+                Appelez maintenant
               </a>
             </Button>
           </div>

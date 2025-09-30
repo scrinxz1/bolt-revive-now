@@ -1,57 +1,68 @@
 import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
+import certibioLogo from "@/assets/certibiocide.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <img src={logo} alt="HYGIPRO Nuisibles" className="h-12 w-auto" />
-            </div>
-            <p className="text-sm leading-relaxed">
-              Expert en dératisation et désinsectisation à Perpignan et ses alentours. Intervention rapide 7j/7
-              24h/24 pour tous vos problèmes de nuisibles.
+            <img 
+              src={logo} 
+              alt="Nuisible Perpignan" 
+              className="h-12 mb-4 brightness-0 invert"
+            />
+            <h3 className="font-bold text-lg mb-2">Nuisible Perpignan</h3>
+            <p className="text-sm text-background/80">
+              Expert en désinsectisation et dératisation dans les Pyrénées-Orientales
             </p>
+            <img 
+              src={certibioLogo} 
+              alt="CERTIBIOCIDE" 
+              className="h-12 mt-4"
+            />
           </div>
 
+          {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Contact</h4>
+            <h3 className="font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
-              <a
-                href="tel:0174747847"
-                className="flex items-center space-x-2 hover:text-accent transition-colors"
+              <a 
+                href="tel:0668053434" 
+                className="flex items-center gap-2 hover:text-primary transition-colors"
               >
-                <Phone className="w-4 h-4" />
-                <span>01 74 74 78 47</span>
+                <Phone className="h-4 w-4" />
+                <span>06 68 05 34 34</span>
               </a>
-              <a
-                href="mailto:contact@hygipronuisibles.fr"
-                className="flex items-center space-x-2 hover:text-accent transition-colors"
+              <a 
+                href="mailto:contact@nuisibleperpignan.fr" 
+                className="flex items-center gap-2 hover:text-primary transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                <span>contact@hygipronuisibles.fr</span>
+                <Mail className="h-4 w-4" />
+                <span>contact@nuisibleperpignan.fr</span>
               </a>
             </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="text-white font-bold mb-4">Nos Services</h4>
-            <ul className="space-y-2 text-sm">
-              <li>Dératisation (rats, souris)</li>
-              <li>Désinsectisation (cafards, blattes)</li>
-              <li>Destruction nids (frelons, guêpes)</li>
-              <li>Traitement punaises de lit</li>
+            <h3 className="font-bold text-lg mb-4">Nos Services</h3>
+            <ul className="space-y-2 text-sm text-background/80">
+              <li>• Dératisation</li>
+              <li>• Désinsectisation</li>
+              <li>• Traitement punaises de lit</li>
+              <li>• Destruction nids de guêpes</li>
+              <li>• Destruction nids de frelons</li>
+              <li>• Traitement cafards et blattes</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>© {new Date().getFullYear()} Hygipro Nuisibles. Tous droits réservés.</p>
-          <p className="mt-2 text-gray-500">
-            Agrément CERTIBIOCIDE - Interventions certifiées et garanties
-          </p>
+        <div className="border-t border-background/20 pt-6 text-center text-sm text-background/80">
+          <p>© 2024 Nuisible Perpignan - Tous droits réservés</p>
+          <p className="mt-2">Entreprise certifiée CERTIBIOCIDE - Agrément n° 066-CS-0054</p>
         </div>
       </div>
     </footer>
