@@ -1,4 +1,6 @@
 import { CheckCircle } from "lucide-react";
+import nuisiblePerpignan from "@/assets/nuisible_perpignan.png";
+import ratSouris from "@/assets/rat_et_souris.png";
 
 const Services = () => {
   const services = [
@@ -69,24 +71,52 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className={`rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+                service.title === "Dératisation"
+                  ? "relative overflow-hidden"
+                  : "bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10"
+              }`}
+              style={
+                service.title === "Dératisation"
+                  ? {
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${nuisiblePerpignan})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
+                  : {}
+              }
             >
-              <div
-                className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6`}
-              >
-                <span className="text-white text-2xl">{service.icon}</span>
+              {/* Reflet blanc sur les cartes noires */}
+              {service.title !== "Dératisation" && (
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none rounded-xl"></div>
+              )}
+              
+              <div className="relative z-10">
+                <div
+                  className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
+                    service.title === "Dératisation"
+                      ? "bg-white/10 backdrop-blur-sm border border-white/20"
+                      : `bg-gradient-to-r ${service.gradient}`
+                  }`}
+                >
+                  {service.title === "Dératisation" ? (
+                    <img src={ratSouris} alt="Rat et souris" className="w-12 h-12 object-contain" />
+                  ) : (
+                    <span className="text-white text-2xl">{service.icon}</span>
+                  )}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <div className="text-base font-semibold text-primary mb-3">{service.subtitle}</div>
+                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-200">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-              <div className="text-base font-semibold text-primary mb-3">{service.subtitle}</div>
-              <p className="text-gray-600 text-sm mb-4">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center space-x-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
