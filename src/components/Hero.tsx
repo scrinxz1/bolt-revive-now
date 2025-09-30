@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="accueil"
-      className="py-20 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100 min-h-[90vh] flex items-center relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-[90vh] flex items-center relative overflow-hidden"
     >
       {/* Animated Background Elements - Heartbeat Blur */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -35,17 +35,17 @@ const Hero = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-                <span className="text-gray-900">Élimination</span>
+                <span className="text-white">Élimination</span>
                 <br />
                 <span className="gradient-text text-5xl md:text-6xl lg:text-7xl">Professionnelle</span>
                 <br />
-                <span className="text-gray-700 text-2xl md:text-3xl lg:text-4xl">
+                <span className="text-gray-300 text-2xl md:text-3xl lg:text-4xl">
                   des Nuisibles
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                <span className="font-semibold text-gray-800">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+                <span className="font-semibold text-gray-200">
                   Dératisation • Désinsectisation • Destruction nids
                 </span>
                 <br />
