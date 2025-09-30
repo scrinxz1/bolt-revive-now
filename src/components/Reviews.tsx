@@ -1,4 +1,4 @@
-import { Star, Users, CheckCircle, Award } from "lucide-react";
+import { Star, MapPin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 const AnimatedCounter = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
@@ -112,105 +112,82 @@ const Reviews = () => {
   ];
 
   return (
-    <section id="avis" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <section id="avis" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Google-Style Stats Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black mb-8">
-            <span className="text-white">Avis </span>
-            <span className="gradient-text">Clients</span>
-          </h2>
-          
-          {/* Google-Style Rating Cards */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="bg-white rounded-xl p-8 shadow-lg min-w-[240px]">
-              <div className="flex items-center justify-center mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400 mr-0.5" />
-                ))}
-              </div>
-              <div className="text-5xl font-black text-gray-900 mb-2 text-center">
-                <AnimatedCounter target={4} />
-                <span>.9/5</span>
-              </div>
-              <div className="text-sm font-medium text-gray-600 text-center">Note Google</div>
-            </div>
+        {/* Titre */}
+        <div className="text-center mb-12">
+          <p className="text-2xl text-gray-700 font-medium max-w-3xl mx-auto">
+            La satisfaction de nos clients témoigne de notre expertise
+          </p>
+        </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg min-w-[240px] text-center">
-              <div className="text-5xl font-black text-gray-900 mb-2">
-                <AnimatedCounter target={247} suffix="+" />
+        {/* Carte centrale avec stats */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Gauche - Note Google */}
+              <div className="text-center border-r border-gray-200">
+                <div className="text-6xl font-black text-gray-900 mb-3">
+                  <AnimatedCounter target={4} />
+                  <span>.9/5</span>
+                </div>
+                <div className="flex justify-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <div className="text-lg font-semibold text-gray-700">Note Google</div>
               </div>
-              <div className="text-sm font-medium text-gray-600 mb-3">Avis clients</div>
-              <div className="text-lg font-semibold text-green-600">98% recommandent</div>
-            </div>
-          </div>
 
-          {/* Stats Section with Animated Counters */}
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+              {/* Droite - Stats */}
+              <div className="text-center">
+                <div className="text-5xl font-black text-gray-900 mb-2">
+                  <AnimatedCounter target={247} suffix="+" />
+                </div>
+                <div className="text-lg font-semibold text-gray-700 mb-4">Avis clients</div>
+                <div className="text-2xl font-bold text-green-600">
+                  <AnimatedCounter target={98} suffix="% recommandent" />
+                </div>
               </div>
-              <AnimatedCounter target={500} suffix="+" />
-              <div className="text-gray-600 font-semibold mt-2">Clients Satisfaits</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <AnimatedCounter target={100} suffix="%" />
-              <div className="text-gray-600 font-semibold mt-2">Taux de Réussite</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-white fill-white" />
-              </div>
-              <div className="flex items-center justify-center gap-1">
-                <AnimatedCounter target={5} />
-                <span className="text-4xl md:text-5xl font-black text-primary">.0</span>
-              </div>
-              <div className="text-gray-600 font-semibold mt-2">Note Moyenne</div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-100 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <AnimatedCounter target={15} suffix="+" />
-              <div className="text-gray-600 font-semibold mt-2">Années d'Expérience</div>
             </div>
           </div>
         </div>
 
-        {/* Reviews Grid - Google Style */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grille d'avis */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-start mb-3">
-                <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-base mr-3 flex-shrink-0">
-                  {review.name[0]}
+              {/* Étoiles en haut */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(review.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+
+              {/* Texte de l'avis */}
+              <p className="text-gray-700 text-sm leading-relaxed mb-6 min-h-[100px]">
+                "{review.text}"
+              </p>
+
+              {/* Info en bas */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="font-bold text-gray-900">{review.name}</span>
+                  <span className="text-gray-500">{review.date}</span>
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900 text-base">{review.name}</div>
-                  <div className="flex items-center mt-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
+                <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center text-gray-600">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    <span>{review.location}</span>
                   </div>
+                  <span className="font-semibold text-green-600">
+                    {index % 4 === 0 ? "Dératisation" : index % 4 === 1 ? "Destruction nid" : index % 4 === 2 ? "Désinsectisation" : "Punaises de lit"}
+                  </span>
                 </div>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3">{review.text}</p>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-500">{review.location}</span>
-                <span className="text-green-600 font-medium">Dératisation</span>
-              </div>
-              <div className="text-xs text-gray-400 mt-2">{review.date}</div>
             </div>
           ))}
         </div>
