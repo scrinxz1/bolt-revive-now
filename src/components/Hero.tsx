@@ -91,7 +91,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-card flex items-center justify-center">
-                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-16 w-auto object-contain" />
+                <img src={certibiocide} alt="CERTIBIOCIDE Agréé" className="h-20 w-auto object-contain opacity-90" />
               </div>
             </div>
           </div>

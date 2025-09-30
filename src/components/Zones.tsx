@@ -16,14 +16,14 @@ const Zones = () => {
   ];
 
   return (
-    <section id="zones" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="zones" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
-            <span className="text-gray-900">Zones </span>
+            <span className="text-white">Zones </span>
             <span className="gradient-text">d'Intervention</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto font-medium">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
             Nous intervenons rapidement dans toute la région pour éliminer vos nuisibles.
           </p>
         </div>

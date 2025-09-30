@@ -1,4 +1,5 @@
 import { Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,10 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">H</span>
-              </div>
-              <div className="text-white font-bold text-lg">Hygipro Nuisibles</div>
+              <img src={logo} alt="HYGIPRO Nuisibles" className="h-12 w-auto" />
             </div>
             <p className="text-sm leading-relaxed">
               Expert en dératisation et désinsectisation à Perpignan et ses alentours. Intervention rapide 7j/7

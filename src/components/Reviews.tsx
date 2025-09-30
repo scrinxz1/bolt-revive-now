@@ -123,33 +123,25 @@ const Reviews = () => {
           
           {/* Google-Style Rating Cards */}
           <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-yellow-400 min-w-[200px]">
-              <div className="flex items-center justify-center mb-2">
+            <div className="bg-white rounded-xl p-8 shadow-lg min-w-[240px]">
+              <div className="flex items-center justify-center mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <div key={i} className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center mr-1">
-                    <Star className="w-5 h-5 fill-yellow-400 text-white" />
-                  </div>
+                  <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400 mr-0.5" />
                 ))}
               </div>
-              <div className="text-4xl font-black text-gray-900 mb-1">
+              <div className="text-5xl font-black text-gray-900 mb-2 text-center">
                 <AnimatedCounter target={4} />
                 <span>.9/5</span>
               </div>
-              <div className="text-sm font-semibold text-gray-600">Note Google</div>
+              <div className="text-sm font-medium text-gray-600 text-center">Note Google</div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-green-400 min-w-[200px]">
-              <div className="text-4xl font-black text-primary mb-1">
+            <div className="bg-white rounded-xl p-8 shadow-lg min-w-[240px] text-center">
+              <div className="text-5xl font-black text-gray-900 mb-2">
                 <AnimatedCounter target={247} suffix="+" />
               </div>
-              <div className="text-sm font-semibold text-gray-600">Avis clients</div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-blue-400 min-w-[200px]">
-              <div className="text-4xl font-black text-blue-600 mb-1">
-                <AnimatedCounter target={98} suffix="%" />
-              </div>
-              <div className="text-sm font-semibold text-gray-600">Recommandent</div>
+              <div className="text-sm font-medium text-gray-600 mb-3">Avis clients</div>
+              <div className="text-lg font-semibold text-green-600">98% recommandent</div>
             </div>
           </div>
 
@@ -197,27 +189,28 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200"
+              className="bg-white rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm mr-3">
-                    {review.name[0]}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 text-sm">{review.name}</div>
-                    <div className="text-xs text-gray-500">{review.location}</div>
+              <div className="flex items-start mb-3">
+                <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-base mr-3 flex-shrink-0">
+                  {review.name[0]}
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900 text-base">{review.name}</div>
+                  <div className="flex items-center mt-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
                   </div>
                 </div>
               </div>
-              <div className="flex items-center mb-3 space-x-1">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-                <span className="text-xs text-gray-400 ml-2">{review.date}</span>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3">{review.text}</p>
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-gray-500">{review.location}</span>
+                <span className="text-green-600 font-medium">Dératisation</span>
               </div>
-              <p className="text-gray-700 text-sm leading-relaxed">{review.text}</p>
+              <div className="text-xs text-gray-400 mt-2">{review.date}</div>
             </div>
           ))}
         </div>

@@ -19,8 +19,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center">
+          <a href="#accueil" className="flex items-center space-x-3">
             <img src={logo} alt="HYGIPRO Nuisibles" className="h-16 w-auto" />
+            <div className="hidden md:block">
+              <div className="text-white font-bold text-xl">Hygipro Nuisibles</div>
+              <div className="text-red-500 font-semibold text-sm">Experts en dératisation</div>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

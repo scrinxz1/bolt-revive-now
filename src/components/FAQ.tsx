@@ -40,14 +40,14 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100">
+    <section id="faq" className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
-            <span className="text-gray-900">Questions </span>
+            <span className="text-white">Questions </span>
             <span className="gradient-text">Fréquentes</span>
           </h2>
-          <p className="text-xl text-gray-600 font-medium">
+          <p className="text-xl text-gray-300 font-medium">
             Trouvez les réponses aux questions les plus courantes.
           </p>
         </div>
