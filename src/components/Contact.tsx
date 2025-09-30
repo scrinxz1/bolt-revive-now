@@ -6,7 +6,8 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gradient-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 relative">
+            <span className="absolute inset-0 blur-2xl bg-red-500/30 -z-10"></span>
             <span className="text-white">Contactez </span>
             <span className="gradient-text">Nous</span>
           </h2>
@@ -44,10 +45,10 @@ const Contact = () => {
                 <div>
                   <div className="font-semibold text-gray-900 mb-1">Email</div>
                   <a
-                    href="mailto:hygopro@nuisible.fr"
+                    href="mailto:contact@hygipronuisibles.fr"
                     className="text-blue-600 font-semibold hover:text-blue-700"
                   >
-                    hygopro@nuisible.fr
+                    contact@hygipronuisibles.fr
                   </a>
                   <p className="text-sm text-gray-600 mt-1">Réponse sous 24h</p>
                 </div>
@@ -59,8 +60,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900 mb-1">Zones d'intervention</div>
-                  <p className="text-gray-700">Paris & Île-de-France</p>
-                  <p className="text-gray-700">Caen & Normandie</p>
+                  <p className="text-gray-700">Perpignan et ses alentours</p>
+                  <p className="text-gray-700">Pyrénées-Orientales (66)</p>
                 </div>
               </div>
 

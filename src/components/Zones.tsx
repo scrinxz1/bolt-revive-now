@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 const Zones = () => {
   const zones = [
     {
-      city: "Paris",
-      areas: ["Paris 75", "Île-de-France", "Seine-Saint-Denis 93", "Hauts-de-Seine 92"],
-      icon: "🗼",
+      city: "Perpignan",
+      areas: ["Perpignan 66", "Pyrénées-Orientales", "Canet-en-Roussillon", "Saint-Cyprien"],
+      icon: "☀️",
     },
     {
-      city: "Caen",
-      areas: ["Caen 14", "Calvados", "Normandie", "Manche 50"],
-      icon: "🏰",
+      city: "Alentours",
+      areas: ["Argelès-sur-Mer", "Collioure", "Céret", "Prades"],
+      icon: "🏖️",
     },
   ];
 

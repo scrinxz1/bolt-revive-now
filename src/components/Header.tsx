@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-gradient-to-r from-gray-800/95 via-gray-900/95 to-gray-800/95 backdrop-blur-md border-b border-gray-700">
+    <header className="fixed w-full top-0 z-50 bg-gradient-to-r from-green-700/95 via-green-600/95 to-green-700/95 backdrop-blur-md border-b border-green-500">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -76,7 +76,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-gray-800 shadow-lg border-t border-gray-700">
+          <div className="lg:hidden absolute top-full left-0 w-full bg-green-700 shadow-lg border-t border-green-500">
             <div className="p-4">
               <div className="grid grid-cols-3 gap-2 mb-4">
                 {["accueil", "services", "zones", "avis", "faq", "contact"].map((item) => (

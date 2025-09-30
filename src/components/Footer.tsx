@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="text-white font-bold text-lg">Hygipro Nuisibles</div>
             </div>
             <p className="text-sm leading-relaxed">
-              Expert en dératisation et désinsectisation à Paris et Caen. Intervention rapide 7j/7
+              Expert en dératisation et désinsectisation à Perpignan et ses alentours. Intervention rapide 7j/7
               24h/24 pour tous vos problèmes de nuisibles.
             </p>
           </div>
@@ -29,11 +29,11 @@ const Footer = () => {
                 <span>01 74 74 78 47</span>
               </a>
               <a
-                href="mailto:hygopro@nuisible.fr"
+                href="mailto:contact@hygipronuisibles.fr"
                 className="flex items-center space-x-2 hover:text-accent transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>hygopro@nuisible.fr</span>
+                <span>contact@hygipronuisibles.fr</span>
               </a>
             </div>
           </div>
