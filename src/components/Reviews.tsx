@@ -122,30 +122,30 @@ const Reviews = () => {
         </div>
 
         {/* Carte centrale avec stats */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-            <div className="grid md:grid-cols-2 gap-6 items-center">
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6">
+            <div className="grid md:grid-cols-2 gap-4 items-center">
               {/* Gauche - Note Google */}
               <div className="text-center border-r border-gray-200">
-                <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
+                <div className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
                   <AnimatedCounter target={4} />
                   <span>.9/5</span>
                 </div>
                 <div className="flex justify-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div className="text-sm font-semibold text-gray-700">Note Google</div>
+                <div className="text-xs font-semibold text-gray-700">Note Google</div>
               </div>
 
               {/* Droite - Stats */}
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
+                <div className="text-xl md:text-2xl font-black text-gray-900 mb-2">
                   <AnimatedCounter target={247} suffix="+" />
                 </div>
-                <div className="text-sm font-semibold text-gray-700 mb-2">Avis clients</div>
-                <div className="text-lg md:text-xl font-bold text-green-600">
+                <div className="text-xs font-semibold text-gray-700 mb-2">Avis clients</div>
+                <div className="text-base md:text-lg font-bold text-green-600">
                   <AnimatedCounter target={98} suffix="% recommandent" />
                 </div>
               </div>
