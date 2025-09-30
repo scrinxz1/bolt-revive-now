@@ -130,15 +130,17 @@ const Reviews = () => {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               {/* Note Google */}
               <div>
-                <div className="text-5xl font-black text-gray-900 mb-2">
-                  <AnimatedCounter target={4} />
-                  <span>.9</span>
-                  <span className="text-2xl text-gray-500">/5</span>
-                </div>
-                <div className="flex justify-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                  ))}
+                <div className="flex items-center justify-center gap-3 mb-3">
+                  <div className="text-5xl font-black text-gray-900">
+                    <AnimatedCounter target={4} />
+                    <span>.9</span>
+                    <span className="text-2xl text-gray-500">/5</span>
+                  </div>
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
                 </div>
                 <div className="text-sm font-semibold text-gray-600">Note Google</div>
               </div>
