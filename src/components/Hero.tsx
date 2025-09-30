@@ -78,10 +78,10 @@ const Hero = () => {
         <div className="grid lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-3 space-y-8 animate-fade-in-up">
             <div className="space-y-6">
-              <div className="inline-flex items-center bg-gradient-primary rounded-full px-6 py-3 shadow-primary">
-                <Shield className="w-5 h-5 text-primary-foreground mr-2" />
-                <span className="text-primary-foreground font-semibold text-sm">
-                  <span className="text-red-500">Experts Certifiés</span> • 7j/7 24h/24
+              <div className="inline-flex items-center bg-gradient-to-r from-red-600 to-orange-600 rounded-full px-6 py-3 shadow-lg">
+                <Shield className="w-5 h-5 text-white mr-2" />
+                <span className="text-white font-semibold text-sm">
+                  Experts Certifiés • 7j/7 24h/24
                 </span>
               </div>
 
