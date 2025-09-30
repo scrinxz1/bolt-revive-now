@@ -1,6 +1,8 @@
 import { CheckCircle } from "lucide-react";
 import nuisiblePerpignan from "@/assets/nuisible_perpignan.png";
 import ratSouris from "@/assets/rat_et_souris.png";
+import cafardBlatte from "@/assets/cafard_blatte.png";
+import cafardIcon from "@/assets/cafard_est_blates.png";
 
 const Services = () => {
   const services = [
@@ -55,8 +57,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-dark">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      {/* Reflet blanc sur la section */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-black mb-6">
             <span className="text-white">Nos </span>
@@ -72,7 +77,7 @@ const Services = () => {
             <div
               key={index}
               className={`rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                service.title === "Dératisation"
+                service.title === "Dératisation" || service.title === "Cafards & Blattes"
                   ? "relative overflow-hidden"
                   : "bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10"
               }`}
@@ -83,24 +88,32 @@ const Services = () => {
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
+                  : service.title === "Cafards & Blattes"
+                  ? {
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${cafardBlatte})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
                   : {}
               }
             >
               {/* Reflet blanc sur les cartes noires */}
-              {service.title !== "Dératisation" && (
+              {service.title !== "Dératisation" && service.title !== "Cafards & Blattes" && (
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none rounded-xl"></div>
               )}
               
               <div className="relative z-10">
                 <div
                   className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
-                    service.title === "Dératisation"
+                    service.title === "Dératisation" || service.title === "Cafards & Blattes"
                       ? "bg-white/10 backdrop-blur-sm border border-white/20"
                       : `bg-gradient-to-r ${service.gradient}`
                   }`}
                 >
                   {service.title === "Dératisation" ? (
                     <img src={ratSouris} alt="Rat et souris" className="w-12 h-12 object-contain" />
+                  ) : service.title === "Cafards & Blattes" ? (
+                    <img src={cafardIcon} alt="Cafards" className="w-12 h-12 object-contain" />
                   ) : (
                     <span className="text-white text-2xl">{service.icon}</span>
                   )}
