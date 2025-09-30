@@ -85,17 +85,23 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+              className="relative overflow-hidden rounded-lg border border-border hover:shadow-xl transition-all duration-300 group"
             >
+              {/* Fond sombre */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+              
               {/* Image de fond */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-50"
+                className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300"
                 style={{ backgroundImage: `url(${service.icon})` }}
               />
               
-              <div className="relative z-10">
+              {/* Reflet blanc */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-60" />
+              
+              <div className="relative z-10 p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-xl font-bold text-white">
                     {service.title}
                   </h3>
                   <p className="text-sm text-primary font-medium">
@@ -103,7 +109,7 @@ const Services = () => {
                   </p>
                 </div>
 
-                <p className="text-muted-foreground mb-6">
+                <p className="text-gray-200 mb-6">
                   {service.description}
                 </p>
 
@@ -111,7 +117,7 @@ const Services = () => {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">{feature}</span>
+                      <span className="text-sm text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
