@@ -89,7 +89,7 @@ const Services = () => {
             >
               {/* Image de fond */}
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-30"
+                className="absolute inset-0 bg-cover bg-center opacity-50"
                 style={{ backgroundImage: `url(${service.icon})` }}
               />
               
