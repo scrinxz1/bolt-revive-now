@@ -158,7 +158,7 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300"
             >
               {/* Étoiles en haut */}
               <div className="flex gap-1 mb-4">
