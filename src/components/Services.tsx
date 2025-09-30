@@ -7,6 +7,8 @@ import frelons from "@/assets/frelons.png";
 import guepesIcon from "@/assets/guepes.png";
 import punaiseLit from "@/assets/punaise_ed_lit.png";
 import punaiseIcon from "@/assets/punaise_arraigner_fourmis.png";
+import hydrogene from "@/assets/hydrogene.png";
+import poubelleIcon from "@/assets/poubelle.png";
 
 const Services = () => {
   const services = [
@@ -73,7 +75,7 @@ const Services = () => {
             <div
               key={index}
               className={`rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                service.title === "Dératisation" || service.title === "Cafards & Blattes" || service.title === "Frelons & Guêpes" || service.title === "Punaise de lit"
+                service.title === "Dératisation" || service.title === "Cafards & Blattes" || service.title === "Frelons & Guêpes" || service.title === "Punaise de lit" || service.title === "Nettoyage Hydrogène"
                   ? "relative overflow-hidden"
                   : "bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-white/10"
               }`}
@@ -102,11 +104,17 @@ const Services = () => {
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }
+                  : service.title === "Nettoyage Hydrogène"
+                  ? {
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${hydrogene})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }
                   : {}
               }
             >
               {/* Reflet blanc sur les cartes noires */}
-              {service.title !== "Dératisation" && service.title !== "Cafards & Blattes" && service.title !== "Frelons & Guêpes" && service.title !== "Punaise de lit" && (
+              {service.title !== "Dératisation" && service.title !== "Cafards & Blattes" && service.title !== "Frelons & Guêpes" && service.title !== "Punaise de lit" && service.title !== "Nettoyage Hydrogène" && (
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none rounded-xl"></div>
               )}
               
@@ -120,6 +128,8 @@ const Services = () => {
                     <img src={guepesIcon} alt="Frelons et Guêpes" className="w-16 h-16 object-contain" />
                   ) : service.title === "Punaise de lit" ? (
                     <img src={punaiseIcon} alt="Punaise de lit" className="w-16 h-16 object-contain" />
+                  ) : service.title === "Nettoyage Hydrogène" ? (
+                    <img src={poubelleIcon} alt="Nettoyage Hydrogène" className="w-16 h-16 object-contain" />
                   ) : (
                     <span className="text-white text-2xl">{service.icon}</span>
                   )}
