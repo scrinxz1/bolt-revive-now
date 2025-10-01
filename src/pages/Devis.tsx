@@ -39,6 +39,11 @@ const Devis = () => {
     try {
       console.log("Demande de devis:", data);
       
+      // Déclencher l'événement de conversion Google Ads
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'ads_conversion_Demande_de_devis_1', {});
+      }
+      
       toast({
         title: "Merci, votre demande a bien été envoyée.",
         description: "Nous vous contacterons dans les plus brefs délais.",
