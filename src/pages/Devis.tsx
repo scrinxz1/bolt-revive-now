@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -61,6 +62,10 @@ const Devis = () => {
       <main className="flex-1 pt-24 pb-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
+            <Link to="/" className="inline-flex items-center text-primary hover:underline mb-6">
+              ← Retour à l'accueil
+            </Link>
+            
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
               Devis gratuit
             </h1>
