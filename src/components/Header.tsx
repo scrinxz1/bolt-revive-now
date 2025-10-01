@@ -18,7 +18,6 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-green-700 border-b border-green-600 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo and Company Name */}
           <div className="flex items-center gap-3">
             <img 
               src={logo} 
@@ -31,7 +30,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("services")}
@@ -59,7 +57,6 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Desktop Contact Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <a href="tel:0650298547">
               <Button size="lg" className="gap-2">
@@ -69,7 +66,6 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden text-white p-2"
@@ -78,7 +74,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-green-600">
             <nav className="flex flex-col gap-4">

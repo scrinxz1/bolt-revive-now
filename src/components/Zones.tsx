@@ -48,9 +48,7 @@ const Zones = () => {
           ))}
         </div>
 
-        {/* Carte avec marqueurs */}
         <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gray-300" style={{ height: '500px' }}>
-          {/* Carte Google Maps intégrée */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185364.98382396464!2d2.7394498999999998!3d42.6886591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b06db68e5e8b69%3A0x4079235db2bb1e0!2sPerpignan!5e0!3m2!1sfr!2sfr!4v1234567890"
             width="100%"
@@ -62,17 +60,14 @@ const Zones = () => {
             className="w-full h-full"
           ></iframe>
           
-          {/* Zone d'intervention - Bas gauche */}
           <div className="absolute bottom-6 left-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg shadow-lg font-bold text-lg z-10">
             Zone d'intervention
           </div>
           
-          {/* 24H/24 - Haut droite clignotant */}
           <div className="absolute top-6 right-6 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg font-black text-xl animate-pulse z-10">
             24H/24
           </div>
           
-          {/* Point clignotant sur Perpignan */}
           <div className="absolute top-[55%] left-[50%] z-10">
             <div className="relative">
               <div className="w-6 h-6 bg-red-600 rounded-full animate-ping absolute"></div>
@@ -80,7 +75,6 @@ const Zones = () => {
             </div>
           </div>
           
-          {/* Point clignotant sur zone côtière */}
           <div className="absolute top-[60%] left-[55%] z-10">
             <div className="relative">
               <div className="w-6 h-6 bg-red-600 rounded-full animate-ping absolute" style={{ animationDelay: '0.5s' }}></div>

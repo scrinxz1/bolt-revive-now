@@ -117,7 +117,6 @@ const Reviews = () => {
           </p>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
           <div className="text-center bg-background rounded-lg p-6 shadow-sm">
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -150,7 +149,6 @@ const Reviews = () => {
           </div>
         </div>
 
-        {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <div

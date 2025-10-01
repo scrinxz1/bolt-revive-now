@@ -15,7 +15,6 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-foreground">
@@ -77,7 +76,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-4 text-foreground">
               Devis gratuit et sans engagement

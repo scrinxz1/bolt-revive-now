@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Company Info */}
           <div>
             <img 
               src={logo} 
@@ -25,7 +24,6 @@ const Footer = () => {
             />
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-3">
@@ -46,7 +44,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-bold text-lg mb-4">Nos Services</h3>
             <ul className="space-y-2 text-sm text-background/80">

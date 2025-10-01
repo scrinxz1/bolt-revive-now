@@ -87,16 +87,11 @@ const Services = () => {
               key={index}
               className="relative overflow-hidden rounded-lg border border-border hover:shadow-xl transition-all duration-300 group"
             >
-              {/* Fond sombre */}
               <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-              
-              {/* Image de fond */}
               <div 
                 className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-300"
                 style={{ backgroundImage: `url(${service.icon})` }}
               />
-              
-              {/* Reflet blanc */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-60" />
               
               <div className="relative z-10 p-6">
