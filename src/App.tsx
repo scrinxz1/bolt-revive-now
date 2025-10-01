@@ -12,6 +12,11 @@ import DevisRapide from "./pages/DevisRapide";
 import DevisDeratisation from "./pages/DevisDeratisation";
 import NuisiblePerpignan from "./pages/NuisiblePerpignan";
 import DevisRapidePerpignan from "./pages/DevisRapidePerpignan";
+import DeratisationPerpignan from "./pages/DeratisationPerpignan";
+import InterventionRapide from "./pages/InterventionRapide";
+import TraitementInsectesPerpignan from "./pages/TraitementInsectesPerpignan";
+import ZonesIntervention from "./pages/ZonesIntervention";
+import DeratisationParticuliersProfessionnels from "./pages/DeratisationParticuliersProfessionnels";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +37,11 @@ const App = () => (
           <Route path="/desinsectisation" element={<Desinsectisation />} />
           <Route path="/desinfection" element={<Desinfection />} />
           <Route path="/devis-rapide" element={<DevisRapide />} />
+          <Route path="/deratisation-perpignan" element={<DeratisationPerpignan />} />
+          <Route path="/intervention-rapide" element={<InterventionRapide />} />
+          <Route path="/traitement-insectes-perpignan" element={<TraitementInsectesPerpignan />} />
+          <Route path="/zones-intervention" element={<ZonesIntervention />} />
+          <Route path="/deratisation-particuliers-professionnels" element={<DeratisationParticuliersProfessionnels />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
