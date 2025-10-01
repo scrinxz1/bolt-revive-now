@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GoogleAd from "@/components/GoogleAd";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Zones from "@/components/Zones";
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <GoogleAd />
       <Hero />
       <Services />
       <Zones />
