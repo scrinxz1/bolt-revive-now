@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
 import { Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import certibioLogo from "@/assets/certibiocide.png";
 import nuisiblePerpignan from "@/assets/nuisible_perpignan.png";
 
@@ -37,6 +38,15 @@ const Hero = () => {
               className="text-lg px-8 py-6"
             >
               Nous contacter
+            </Button>
+            <Button 
+              size="lg"
+              asChild
+              className="text-lg px-8 py-6 bg-green-600 text-white font-bold hover:bg-green-700"
+            >
+              <Link to="/devis">
+                DEVIS GRATUIT
+              </Link>
             </Button>
             <Button 
               size="lg"
