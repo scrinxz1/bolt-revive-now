@@ -12,6 +12,7 @@ const Services = () => {
       title: "Cafards et Blattes",
       subtitle: "Élimination complète",
       description: "Traitement professionnel contre les cafards et blattes avec garantie de résultat",
+      alt: "Traitement cafards blattes Montpellier - Désinsectisation professionnelle Hérault 34",
       features: [
         "Diagnostic gratuit",
         "Traitement par gel et pulvérisation",
@@ -24,6 +25,7 @@ const Services = () => {
       title: "Rats et Souris",
       subtitle: "Dératisation efficace",
       description: "Solutions professionnelles de dératisation adaptées à votre situation",
+      alt: "Dératisation rats souris Montpellier - Expert élimination rongeurs Hérault 34",
       features: [
         "Inspection complète des lieux",
         "Pose de pièges sécurisés",
@@ -36,6 +38,7 @@ const Services = () => {
       title: "Punaises de Lit, Fourmis et Araignées",
       subtitle: "Traitement spécialisé",
       description: "Éradication totale des punaises de lit et contrôle des invasions d'insectes",
+      alt: "Traitement punaises de lit fourmis araignées Montpellier - Désinsectisation Hérault",
       features: [
         "Détection canine disponible",
         "Traitement thermique et chimique",
@@ -48,6 +51,7 @@ const Services = () => {
       title: "Guêpes et Frelons",
       subtitle: "Destruction de nids",
       description: "Intervention sécurisée pour la destruction des nids de guêpes et frelons",
+      alt: "Destruction nids guêpes frelons Montpellier - Intervention sécurisée Hérault 34",
       features: [
         "Frelons asiatiques et européens",
         "Intervention en hauteur",
@@ -60,6 +64,7 @@ const Services = () => {
       title: "Nettoyage Hydrogène",
       subtitle: "Désinfection professionnelle",
       description: "Nettoyage et désinfection écologique par vaporisation d'hydrogène",
+      alt: "Désinfection nettoyage hydrogène Montpellier - Traitement écologique après infestation Hérault",
       features: [
         "Désinfection complète",
         "Sans produits chimiques nocifs",

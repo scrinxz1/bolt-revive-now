@@ -58,6 +58,7 @@ const Zones = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
+            title="Zone d'intervention dératisation désinsectisation Montpellier Hérault"
           ></iframe>
           
           <div className="absolute bottom-6 left-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg shadow-lg font-bold text-lg z-10">

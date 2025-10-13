@@ -10,8 +10,9 @@ const Footer = () => {
           <div>
             <img 
               src={logo} 
-              alt="Nuisible Montpellier" 
+              alt="Hygipro Nuisibles Montpellier - Dératisation désinsectisation professionnelle Hérault 34" 
               className="h-12 mb-4 brightness-0 invert"
+              loading="lazy"
             />
             <h3 className="font-bold text-lg mb-2">Nuisible Montpellier</h3>
             <p className="text-sm text-background/80">
@@ -19,8 +20,9 @@ const Footer = () => {
             </p>
             <img 
               src={certibioLogo} 
-              alt="CERTIBIOCIDE" 
+              alt="Agrément CERTIBIOCIDE 034-CS-0054 - Professionnel certifié traitement nuisibles Montpellier" 
               className="h-12 mt-4"
+              loading="lazy"
             />
           </div>
 

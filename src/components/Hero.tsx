@@ -79,8 +79,9 @@ const Hero = () => {
           <div className="flex flex-col items-center gap-4">
             <img 
               src={certibioLogo} 
-              alt="CERTIBIOCIDE Agréé" 
+              alt="Certification CERTIBIOCIDE - Entreprise agréée dératisation désinsectisation Montpellier Hérault" 
               className="h-16 md:h-20"
+              loading="lazy"
             />
           </div>
         </div>

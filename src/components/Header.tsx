@@ -21,7 +21,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img 
               src={logo} 
-              alt="Logo Nuisible Montpellier" 
+              alt="Logo Hygipro Nuisibles - Expert dératisation désinsectisation Montpellier 34" 
               className="h-14 w-auto"
             />
             <div className="hidden sm:block">
