@@ -52,11 +52,11 @@ const DevisRapide = () => {
               <h2 className="text-2xl font-bold mt-8 mb-4">Pourquoi nous choisir ?</h2>
               
               <p className="mb-4">
-                Avec plusieurs années d'expérience dans la lutte antiparasitaire à Perpignan, nous garantissons des interventions efficaces et durables. Nos méthodes respectent l'environnement tout en assurant l'élimination complète des nuisibles. Nous utilisons exclusivement des produits certifiés et appliquons des protocoles stricts pour votre sécurité.
+                Avec plusieurs années d'expérience dans la lutte antiparasitaire à Montpellier, nous garantissons des interventions efficaces et durables. Nos méthodes respectent l'environnement tout en assurant l'élimination complète des nuisibles. Nous utilisons exclusivement des produits certifiés et appliquons des protocoles stricts pour votre sécurité.
               </p>
 
               <p className="mb-6">
-                N'attendez pas que l'infestation s'aggrave. Plus vous agissez tôt, plus le traitement sera simple et économique. Appelez-nous maintenant ou demandez votre devis gratuit en ligne. Intervention rapide dans tout Perpignan et les Pyrénées-Orientales.
+                N'attendez pas que l'infestation s'aggrave. Plus vous agissez tôt, plus le traitement sera simple et économique. Appelez-nous maintenant ou demandez votre devis gratuit en ligne. Intervention rapide dans tout Montpellier et l'Hérault.
               </p>
             </div>
 
