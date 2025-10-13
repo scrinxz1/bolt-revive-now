@@ -41,8 +41,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                    <a href="mailto:contact@nuisibleperpignan.fr" className="text-primary hover:underline">
-                      contact@nuisibleperpignan.fr
+                    <a href="mailto:contact@nuisiblemontpellier.fr" className="text-primary hover:underline">
+                      contact@nuisiblemontpellier.fr
                     </a>
                     <p className="text-sm text-muted-foreground">Réponse sous 2h</p>
                   </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Zone d'intervention</h4>
                     <p className="text-muted-foreground">
-                      Perpignan et Pyrénées-Orientales
+                      Montpellier et Hérault
                     </p>
                     <p className="text-sm text-muted-foreground">Rayon de 50 km</p>
                   </div>

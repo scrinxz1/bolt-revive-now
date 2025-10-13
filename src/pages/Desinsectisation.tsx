@@ -13,18 +13,18 @@ const Desinsectisation = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Désinsectisation à Perpignan - Experts en Traitement Anti-Insectes
+              Désinsectisation à Montpellier - Experts en Traitement Anti-Insectes
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Cafards, punaises de lit, guêpes, frelons ou fourmis envahissent votre espace ? Notre équipe spécialisée en désinsectisation intervient rapidement à Perpignan pour éliminer tous types d'insectes nuisibles de manière efficace et durable.
+                Cafards, punaises de lit, guêpes, frelons ou fourmis envahissent votre espace ? Notre équipe spécialisée en désinsectisation intervient rapidement à Montpellier pour éliminer tous types d'insectes nuisibles de manière efficace et durable.
               </p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">Solutions professionnelles contre tous les insectes</h2>
               
               <p className="mb-4">
-                Les insectes nuisibles peuvent rapidement devenir un cauchemar dans votre quotidien. Les punaises de lit perturbent votre sommeil, les cafards contaminent votre cuisine, les guêpes et frelons représentent un danger pour votre sécurité. Notre service de désinsectisation professionnel à Perpignan utilise des techniques avancées et des produits certifiés pour garantir l'éradication complète de ces nuisibles.
+                Les insectes nuisibles peuvent rapidement devenir un cauchemar dans votre quotidien. Les punaises de lit perturbent votre sommeil, les cafards contaminent votre cuisine, les guêpes et frelons représentent un danger pour votre sécurité. Notre service de désinsectisation professionnel à Montpellier utilise des techniques avancées et des produits certifiés pour garantir l'éradication complète de ces nuisibles.
               </p>
 
               <p className="mb-4">
@@ -38,7 +38,7 @@ const Desinsectisation = () => {
               </p>
 
               <p className="mb-6">
-                Intervention rapide dans tout Perpignan et les Pyrénées-Orientales. Devis gratuit et sans engagement. Contactez-nous dès maintenant pour retrouver un environnement sain et sans insectes.
+                Intervention rapide dans tout Montpellier et l'Hérault. Devis gratuit et sans engagement. Contactez-nous dès maintenant pour retrouver un environnement sain et sans insectes.
               </p>
             </div>
 

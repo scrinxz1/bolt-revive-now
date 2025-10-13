@@ -10,12 +10,12 @@ const Footer = () => {
           <div>
             <img 
               src={logo} 
-              alt="Nuisible Perpignan" 
+              alt="Nuisible Montpellier" 
               className="h-12 mb-4 brightness-0 invert"
             />
-            <h3 className="font-bold text-lg mb-2">Nuisible Perpignan</h3>
+            <h3 className="font-bold text-lg mb-2">Nuisible Montpellier</h3>
             <p className="text-sm text-background/80">
-              Expert en désinsectisation et dératisation dans les Pyrénées-Orientales
+              Expert en désinsectisation et dératisation dans l'Hérault
             </p>
             <img 
               src={certibioLogo} 
@@ -35,11 +35,11 @@ const Footer = () => {
                 <span>06 50 29 85 47</span>
               </a>
               <a 
-                href="mailto:contact@nuisibleperpignan.fr" 
+                href="mailto:contact@nuisiblemontpellier.fr" 
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                <span>contact@nuisibleperpignan.fr</span>
+                <span>contact@nuisiblemontpellier.fr</span>
               </a>
             </div>
           </div>
@@ -58,8 +58,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 pt-6 text-center text-sm text-background/80">
-          <p>© 2024 Nuisible Perpignan - Tous droits réservés</p>
-          <p className="mt-2">Entreprise certifiée CERTIBIOCIDE - Agrément n° 066-CS-0054</p>
+          <p>© 2024 Hygipronuisible Montpellier - Tous droits réservés</p>
+          <p className="mt-2">Entreprise certifiée CERTIBIOCIDE - Agrément n° 034-CS-0054</p>
         </div>
       </div>
     </footer>

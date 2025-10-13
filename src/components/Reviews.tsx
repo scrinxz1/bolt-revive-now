@@ -57,7 +57,7 @@ const Reviews = () => {
   const reviews = [
     {
       name: "Marie L.",
-      location: "Perpignan",
+      location: "Montpellier",
       rating: 5,
       text: "Service impeccable ! Intervention rapide pour un problème de cafards. L'équipe est professionnelle et efficace.",
       date: "Il y a 2 semaines",
@@ -65,7 +65,7 @@ const Reviews = () => {
     },
     {
       name: "Jean-Pierre M.",
-      location: "Canet-en-Roussillon",
+      location: "Lattes",
       rating: 5,
       text: "Très satisfait de la dératisation effectuée dans mon restaurant. Discret et efficace.",
       date: "Il y a 1 mois",
@@ -73,7 +73,7 @@ const Reviews = () => {
     },
     {
       name: "Sophie D.",
-      location: "Argelès-sur-Mer",
+      location: "Mauguio",
       rating: 5,
       text: "Intervention rapide pour des punaises de lit. Problème résolu après 2 passages. Je recommande !",
       date: "Il y a 3 semaines",
@@ -81,7 +81,7 @@ const Reviews = () => {
     },
     {
       name: "Antoine R.",
-      location: "Saint-Cyprien",
+      location: "Castelnau-le-Lez",
       rating: 5,
       text: "Excellent service pour l'enlèvement d'un nid de guêpes. Intervention sécurisée et rapide.",
       date: "Il y a 1 semaine",
@@ -89,7 +89,7 @@ const Reviews = () => {
     },
     {
       name: "Claire B.",
-      location: "Collioure",
+      location: "Pérols",
       rating: 5,
       text: "Professionnels à l'écoute et réactifs. Le traitement contre les fourmis a été très efficace.",
       date: "Il y a 2 mois",
@@ -97,7 +97,7 @@ const Reviews = () => {
     },
     {
       name: "Michel T.",
-      location: "Céret",
+      location: "Saint-Jean-de-Védas",
       rating: 5,
       text: "Service de qualité. Intervention pour des frelons asiatiques réalisée avec professionnalisme.",
       date: "Il y a 3 semaines",

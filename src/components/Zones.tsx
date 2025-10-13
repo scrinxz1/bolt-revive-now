@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 const Zones = () => {
   const zones = [
     {
-      city: "Perpignan",
-      areas: ["Perpignan 66", "Pyrénées-Orientales", "Canet-en-Roussillon", "Saint-Cyprien"],
+      city: "Montpellier",
+      areas: ["Montpellier 34", "Hérault", "Lattes", "Mauguio"],
     },
     {
       city: "Alentours",
-      areas: ["Argelès-sur-Mer", "Collioure", "Céret", "Prades"],
+      areas: ["Pérols", "Castelnau-le-Lez", "Saint-Jean-de-Védas", "Juvignac", "Baillargues", "Lunel"],
     },
   ];
 
@@ -50,7 +50,7 @@ const Zones = () => {
 
         <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gray-300" style={{ height: '500px' }}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185364.98382396464!2d2.7394498999999998!3d42.6886591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b06db68e5e8b69%3A0x4079235db2bb1e0!2sPerpignan!5e0!3m2!1sfr!2sfr!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185070.21954764794!3d43.610769!4d3.876716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1234567890"
             width="100%"
             height="100%"
             style={{ border: 0 }}

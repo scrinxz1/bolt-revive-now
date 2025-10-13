@@ -13,18 +13,18 @@ const DevisDeratisation = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Devis Dératisation Gratuit à Perpignan - Intervention 24h/24
+              Devis Dératisation Gratuit à Montpellier - Intervention 24h/24
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Demandez votre devis gratuit pour une dératisation professionnelle à Perpignan. Nos experts certifiés vous proposent une solution sur mesure adaptée à votre situation. Intervention rapide et tarifs transparents.
+                Demandez votre devis gratuit pour une dératisation professionnelle à Montpellier. Nos experts certifiés vous proposent une solution sur mesure adaptée à votre situation. Intervention rapide et tarifs transparents.
               </p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">Devis gratuit et sans engagement</h2>
               
               <p className="mb-4">
-                Confronté à une invasion de rats ou de souris dans votre habitation ou vos locaux professionnels à Perpignan ? Obtenez rapidement un devis gratuit et personnalisé pour éliminer définitivement ces nuisibles. Notre équipe d'experts en dératisation évalue précisément l'ampleur de l'infestation et vous propose un plan d'action efficace avec un tarif clair et détaillé.
+                Confronté à une invasion de rats ou de souris dans votre habitation ou vos locaux professionnels à Montpellier ? Obtenez rapidement un devis gratuit et personnalisé pour éliminer définitivement ces nuisibles. Notre équipe d'experts en dératisation évalue précisément l'ampleur de l'infestation et vous propose un plan d'action efficace avec un tarif clair et détaillé.
               </p>
 
               <p className="mb-4">
@@ -38,7 +38,7 @@ const DevisDeratisation = () => {
               </p>
 
               <p className="mb-6">
-                N'attendez pas que l'infestation s'aggrave. Plus vous agissez rapidement, plus le traitement sera simple et économique. Contactez-nous dès maintenant pour votre devis gratuit de dératisation à Perpignan. Intervention possible sous 24 heures dans tout le département des Pyrénées-Orientales.
+                N'attendez pas que l'infestation s'aggrave. Plus vous agissez rapidement, plus le traitement sera simple et économique. Contactez-nous dès maintenant pour votre devis gratuit de dératisation à Montpellier. Intervention possible sous 24 heures dans tout le département de l'Hérault.
               </p>
             </div>
 

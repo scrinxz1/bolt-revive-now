@@ -13,12 +13,12 @@ const DevisRapide = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Devis Gratuit et Intervention Rapide à Perpignan
+              Devis Gratuit et Intervention Rapide à Montpellier
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Vous avez un problème de nuisibles à Perpignan ? Obtenez un devis gratuit en quelques minutes et bénéficiez d'une intervention rapide par nos experts certifiés. Nous intervenons dans tout le département des Pyrénées-Orientales pour tous types de nuisibles.
+                Vous avez un problème de nuisibles à Montpellier ? Obtenez un devis gratuit en quelques minutes et bénéficiez d'une intervention rapide par nos experts certifiés. Nous intervenons dans tout le département de l'Hérault pour tous types de nuisibles.
               </p>
 
               <div className="grid md:grid-cols-3 gap-6 my-8 not-prose">
@@ -42,7 +42,7 @@ const DevisRapide = () => {
               <h2 className="text-2xl font-bold mt-8 mb-4">Comment ça marche ?</h2>
               
               <p className="mb-4">
-                Obtenir un devis pour l'élimination de nuisibles à Perpignan n'a jamais été aussi simple. Contactez-nous par téléphone au 06 50 29 85 47 ou remplissez notre formulaire en ligne. Un de nos experts vous rappelle rapidement pour évaluer votre situation et vous proposer une solution adaptée. Nous établissons un devis détaillé et transparent, sans frais cachés.
+                Obtenir un devis pour l'élimination de nuisibles à Montpellier n'a jamais été aussi simple. Contactez-nous par téléphone au 06 50 29 85 47 ou remplissez notre formulaire en ligne. Un de nos experts vous rappelle rapidement pour évaluer votre situation et vous proposer une solution adaptée. Nous établissons un devis détaillé et transparent, sans frais cachés.
               </p>
 
               <p className="mb-4">

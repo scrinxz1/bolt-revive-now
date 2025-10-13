@@ -13,18 +13,18 @@ const NuisiblePerpignan = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Traitement Anti-Nuisibles à Perpignan - Expert Certifié
+              Traitement Anti-Nuisibles à Montpellier - Expert Certifié
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Vous recherchez un expert en traitement anti-nuisibles à Perpignan ? Notre entreprise spécialisée intervient rapidement pour éliminer tous types de nuisibles : rats, souris, cafards, punaises de lit, guêpes, frelons. Solutions professionnelles et durables garanties.
+                Vous recherchez un expert en traitement anti-nuisibles à Montpellier ? Notre entreprise spécialisée intervient rapidement pour éliminer tous types de nuisibles : rats, souris, cafards, punaises de lit, guêpes, frelons. Solutions professionnelles et durables garanties.
               </p>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">Votre spécialiste anti-nuisibles à Perpignan</h2>
+              <h2 className="text-2xl font-bold mt-8 mb-4">Votre spécialiste anti-nuisibles à Montpellier</h2>
               
               <p className="mb-4">
-                Les nuisibles peuvent rapidement transformer votre quotidien en cauchemar. Qu'il s'agisse de rongeurs dans vos murs, de cafards dans votre cuisine, de punaises de lit dans votre chambre ou de nids de guêpes sur votre propriété, chaque infestation nécessite une intervention professionnelle rapide et efficace. Notre entreprise certifiée CERTIBIOCIDE intervient dans tout Perpignan et les Pyrénées-Orientales pour traiter tous types de nuisibles.
+                Les nuisibles peuvent rapidement transformer votre quotidien en cauchemar. Qu'il s'agisse de rongeurs dans vos murs, de cafards dans votre cuisine, de punaises de lit dans votre chambre ou de nids de guêpes sur votre propriété, chaque infestation nécessite une intervention professionnelle rapide et efficace. Notre entreprise certifiée CERTIBIOCIDE intervient dans tout Montpellier et l'Hérault pour traiter tous types de nuisibles.
               </p>
 
               <p className="mb-4">
@@ -34,11 +34,11 @@ const NuisiblePerpignan = () => {
               <h2 className="text-2xl font-bold mt-8 mb-4">Intervention rapide et efficace</h2>
               
               <p className="mb-4">
-                Face à une infestation de nuisibles, la rapidité d'intervention est cruciale. Plus vous attendez, plus les nuisibles se reproduisent et envahissent votre espace. Notre équipe se déplace rapidement à Perpignan, généralement sous 24 heures, pour évaluer la situation et mettre en place le traitement adapté. Nous intervenons auprès des particuliers comme des professionnels : restaurants, hôtels, commerces, bureaux et collectivités.
+                Face à une infestation de nuisibles, la rapidité d'intervention est cruciale. Plus vous attendez, plus les nuisibles se reproduisent et envahissent votre espace. Notre équipe se déplace rapidement à Montpellier, généralement sous 24 heures, pour évaluer la situation et mettre en place le traitement adapté. Nous intervenons auprès des particuliers comme des professionnels : restaurants, hôtels, commerces, bureaux et collectivités.
               </p>
 
               <p className="mb-6">
-                Nos tarifs sont transparents et nos devis gratuits. Chaque intervention est suivie d'un contrôle pour vérifier l'efficacité du traitement. Nous vous accompagnons également avec des conseils préventifs pour éviter toute nouvelle infestation. Contactez-nous maintenant pour une intervention rapide à Perpignan et retrouvez un environnement sain et sécurisé.
+                Nos tarifs sont transparents et nos devis gratuits. Chaque intervention est suivie d'un contrôle pour vérifier l'efficacité du traitement. Nous vous accompagnons également avec des conseils préventifs pour éviter toute nouvelle infestation. Contactez-nous maintenant pour une intervention rapide à Montpellier et retrouvez un environnement sain et sécurisé.
               </p>
             </div>
 

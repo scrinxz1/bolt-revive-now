@@ -13,18 +13,18 @@ const Desinfection = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Désinfection Professionnelle à Perpignan - Hygiène Garantie
+              Désinfection Professionnelle à Montpellier - Hygiène Garantie
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Besoin d'une désinfection complète de vos locaux à Perpignan ? Notre équipe d'experts intervient pour éliminer bactéries, virus et germes pathogènes avec des protocoles professionnels certifiés et des produits désinfectants de haute qualité.
+                Besoin d'une désinfection complète de vos locaux à Montpellier ? Notre équipe d'experts intervient pour éliminer bactéries, virus et germes pathogènes avec des protocoles professionnels certifiés et des produits désinfectants de haute qualité.
               </p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">Service de désinfection professionnel</h2>
               
               <p className="mb-4">
-                La désinfection professionnelle est essentielle pour maintenir un environnement sain et sécurisé, que ce soit dans votre habitation, vos locaux commerciaux ou vos espaces professionnels. Après une infestation de nuisibles, un sinistre ou simplement pour assurer une hygiène optimale, notre service de désinfection à Perpignan utilise des techniques éprouvées et des produits biocides homologués pour éliminer tous les agents pathogènes.
+                La désinfection professionnelle est essentielle pour maintenir un environnement sain et sécurisé, que ce soit dans votre habitation, vos locaux commerciaux ou vos espaces professionnels. Après une infestation de nuisibles, un sinistre ou simplement pour assurer une hygiène optimale, notre service de désinfection à Montpellier utilise des techniques éprouvées et des produits biocides homologués pour éliminer tous les agents pathogènes.
               </p>
 
               <p className="mb-4">
@@ -38,7 +38,7 @@ const Desinfection = () => {
               </p>
 
               <p className="mb-6">
-                Intervention rapide dans tout Perpignan et les Pyrénées-Orientales. Devis gratuit sur simple demande. Contactez-nous pour bénéficier d'un service professionnel et discret adapté à vos besoins spécifiques.
+                Intervention rapide dans tout Montpellier et l'Hérault. Devis gratuit sur simple demande. Contactez-nous pour bénéficier d'un service professionnel et discret adapté à vos besoins spécifiques.
               </p>
             </div>
 

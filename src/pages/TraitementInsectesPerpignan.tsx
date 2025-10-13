@@ -13,18 +13,18 @@ const TraitementInsectesPerpignan = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Traitement Professionnel des Insectes à Perpignan
+              Traitement Professionnel des Insectes à Montpellier
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Spécialiste du traitement des insectes nuisibles à Perpignan : cafards, punaises de lit, fourmis, guêpes, frelons. Intervention rapide 7j/7, produits professionnels efficaces, devis gratuit. Entreprise certifiée CERTIBIOCIDE.
+                Spécialiste du traitement des insectes nuisibles à Montpellier : cafards, punaises de lit, fourmis, guêpes, frelons. Intervention rapide 7j/7, produits professionnels efficaces, devis gratuit. Entreprise certifiée CERTIBIOCIDE.
               </p>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">Expert en désinsectisation à Perpignan</h2>
+              <h2 className="text-2xl font-bold mt-8 mb-4">Expert en désinsectisation à Montpellier</h2>
               
               <p className="mb-4">
-                Les insectes nuisibles peuvent rapidement envahir votre habitation ou vos locaux professionnels et causer d'importants désagréments. Cafards dans la cuisine, punaises de lit dans les chambres, fourmis dans les pièces de vie, guêpes ou frelons sur votre propriété : chaque infestation nécessite un traitement spécifique et professionnel. Notre entreprise spécialisée intervient à Perpignan et dans les Pyrénées-Orientales pour éliminer tous types d'insectes nuisibles.
+                Les insectes nuisibles peuvent rapidement envahir votre habitation ou vos locaux professionnels et causer d'importants désagréments. Cafards dans la cuisine, punaises de lit dans les chambres, fourmis dans les pièces de vie, guêpes ou frelons sur votre propriété : chaque infestation nécessite un traitement spécifique et professionnel. Notre entreprise spécialisée intervient à Montpellier et dans l'Hérault pour éliminer tous types d'insectes nuisibles.
               </p>
 
               <p className="mb-4">
@@ -38,7 +38,7 @@ const TraitementInsectesPerpignan = () => {
               </p>
 
               <p className="mb-6">
-                Intervention rapide 7j/7, généralement sous 24 heures. Devis gratuit et tarifs transparents. Chaque traitement est suivi d'un contrôle pour vérifier son efficacité. Nous vous accompagnons également avec des conseils préventifs pour maintenir un environnement sain et protégé. Contactez-nous pour un traitement professionnel des insectes nuisibles à Perpignan.
+                Intervention rapide 7j/7, généralement sous 24 heures. Devis gratuit et tarifs transparents. Chaque traitement est suivi d'un contrôle pour vérifier son efficacité. Nous vous accompagnons également avec des conseils préventifs pour maintenir un environnement sain et protégé. Contactez-nous pour un traitement professionnel des insectes nuisibles à Montpellier.
               </p>
             </div>
 

@@ -23,7 +23,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Nuisible Perpignan, votre expert en dératisation dans les Pyrénées-Orientales
+            Nuisible Montpellier, votre expert en dératisation dans l'Hérault
           </h1>
           
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">

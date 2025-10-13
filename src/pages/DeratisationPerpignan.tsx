@@ -13,18 +13,18 @@ const DeratisationPerpignan = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              Dératisation à Perpignan - Entreprise Certifiée CERTIBIOCIDE
+              Dératisation à Montpellier - Entreprise Certifiée CERTIBIOCIDE
             </h1>
             
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-muted-foreground mb-6">
-                Entreprise de dératisation à Perpignan spécialisée dans l'élimination des rats et souris. Intervention rapide 7j/7, devis gratuit, traitement professionnel et garantie de résultats durables. Experts certifiés depuis plus de 10 ans.
+                Entreprise de dératisation à Montpellier spécialisée dans l'élimination des rats et souris. Intervention rapide 7j/7, devis gratuit, traitement professionnel et garantie de résultats durables. Experts certifiés depuis plus de 10 ans.
               </p>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">Votre expert en dératisation à Perpignan</h2>
+              <h2 className="text-2xl font-bold mt-8 mb-4">Votre expert en dératisation à Montpellier</h2>
               
               <p className="mb-4">
-                Les rongeurs représentent un danger sanitaire majeur pour votre habitation ou vos locaux professionnels. Rats noirs, rats bruns et souris se reproduisent rapidement et peuvent causer d'importants dégâts matériels : câbles électriques rongés, isolation détériorée, denrées contaminées. Notre entreprise de dératisation intervient rapidement à Perpignan et dans tout le département des Pyrénées-Orientales pour éliminer définitivement ces nuisibles.
+                Les rongeurs représentent un danger sanitaire majeur pour votre habitation ou vos locaux professionnels. Rats noirs, rats bruns et souris se reproduisent rapidement et peuvent causer d'importants dégâts matériels : câbles électriques rongés, isolation détériorée, denrées contaminées. Notre entreprise de dératisation intervient rapidement à Montpellier et dans tout le département de l'Hérault pour éliminer définitivement ces nuisibles.
               </p>
 
               <p className="mb-4">
@@ -34,11 +34,11 @@ const DeratisationPerpignan = () => {
               <h2 className="text-2xl font-bold mt-8 mb-4">Intervention rapide contre rats et souris</h2>
               
               <p className="mb-4">
-                Face à une infestation de rongeurs, chaque jour compte. Plus vous attendez, plus les rats et souris se multiplient et causent de dégâts. Notre équipe intervient rapidement, généralement sous 24 heures, pour traiter efficacement votre problème de dératisation à Perpignan. Nous intervenons chez les particuliers comme chez les professionnels : restaurants, commerces, hôtels, entrepôts, copropriétés et collectivités.
+                Face à une infestation de rongeurs, chaque jour compte. Plus vous attendez, plus les rats et souris se multiplient et causent de dégâts. Notre équipe intervient rapidement, généralement sous 24 heures, pour traiter efficacement votre problème de dératisation à Montpellier. Nous intervenons chez les particuliers comme chez les professionnels : restaurants, commerces, hôtels, entrepôts, copropriétés et collectivités.
               </p>
 
               <p className="mb-6">
-                Devis gratuit dératisation Perpignan, tarifs transparents et intervention garantie. Nous assurons également un suivi post-traitement pour vérifier l'efficacité de nos solutions et vous conseillons sur les bonnes pratiques pour éviter toute nouvelle infestation. Contactez-nous maintenant pour une élimination durable des rats, souris et autres rongeurs nuisibles.
+                Devis gratuit dératisation Montpellier, tarifs transparents et intervention garantie. Nous assurons également un suivi post-traitement pour vérifier l'efficacité de nos solutions et vous conseillons sur les bonnes pratiques pour éviter toute nouvelle infestation. Contactez-nous maintenant pour une élimination durable des rats, souris et autres rongeurs nuisibles.
               </p>
             </div>
 

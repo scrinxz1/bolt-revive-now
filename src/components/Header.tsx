@@ -21,11 +21,11 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img 
               src={logo} 
-              alt="Logo Nuisible Perpignan" 
+              alt="Logo Nuisible Montpellier" 
               className="h-14 w-auto"
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white">Nuisible Perpignan</h1>
+              <h1 className="text-xl font-bold text-white">Nuisible Montpellier</h1>
               <p className="text-xs text-white/80">Expert en désinsectisation</p>
             </div>
           </div>
